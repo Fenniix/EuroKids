@@ -1,8 +1,13 @@
+import "../styles/home.css"
+import NavbarP from "../components/layout/Navbar"
+
 const home = () => {
   return (
     <>
-      <h1>Para probar</h1>
-
+      <NavbarP/>
+      <div className="Prueba"></div>
+      <div id="homes"></div>
+      <h1>hola</h1>
     </>
   )
 }
