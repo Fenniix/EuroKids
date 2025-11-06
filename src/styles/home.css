@@ -1,7 +1,7 @@
 /*Barra de navegación*/
 .Nav{
   background-color: blueviolet;
-  position: fixed;
+  position: absolute;
   width: 100%;
 }
 
@@ -10,12 +10,25 @@
 }
 
 /*Presentacion*/
-.video-cont{
+.font-pre{
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
+
+.cont-animado{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.cont-animado.visible-1{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Pendiente
 
 .videoEK{
   position: absolute;
@@ -24,10 +37,38 @@
   object-fit: cover;
   z-index: -1;
 }
+*/
 
 .cont-p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: black;
   position: relative;
-  z-index: -1;
+}
+
+/*¿Que aprenderan?*/
+
+.aprendizaje{
+  background-color: blueviolet;
+}
+
+.tabs-cont{
+  background-color: blueviolet;
+}
+
+.tabs-cont .nav-link{
+  color: white;
+}
+
+.tabs-cont .nav-link.active{
+  color: rgb(241, 237, 0);
+}
+
+.card-cont{
+  border: 0;
 }
 
 .Prueba{
