@@ -11,16 +11,16 @@ const NavbarP = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto justify-content-center" style={{ flex: 1 }}>
-            <Nav.Link href="#opcion1" className="mx-3">
+            <Nav.Link href="#opcion1" className="mx-3 text-white">
               Opción 1
             </Nav.Link>
-            <NavDropdown title="Opción2" id="nav-dropdown" className="mx-3">
+            <NavDropdown title="Opción2" id="nav-dropdown" className="mx-3 color-texto">
               <NavDropdown.Item href="/Ekcanoitas">EK Canoitas</NavDropdown.Item>
               <NavDropdown.Item href="/Ekmoctezuma">EK Moctezuma</NavDropdown.Item>
               {/*<NavDropdown.Divider />*/}
               <NavDropdown.Item href="/Eklaureles">EuroKids Laureles</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#opcion3" className="mx-3">
+            <Nav.Link href="#opcion3" className="mx-3 text-white">
               Opción 3
             </Nav.Link>
           </Nav>

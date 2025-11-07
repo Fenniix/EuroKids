@@ -1,6 +1,9 @@
 import NavbarP from "../components/layout/Navbar"
-import {Container, Card, Nav, Button, Tab, Tabs} from "react-bootstrap"
+import {Container, Card, Nav, Button, Tab, Tabs, CardImg} from "react-bootstrap"
 import { useEffect } from "react"
+import interactiva from "../assets/img/cls-interactiva.jpg"
+import juegos from "../assets/img/cls-juegos.jpg"
+import platica from "../assets/img/cls-platica.jpeg"
 import "../styles/home.css"
 
 const home = () => {
@@ -14,7 +17,7 @@ const home = () => {
           }
         });
       },
-      { threshold: 0.2 } // se activa cuando el 20% es visible
+      { threshold: 0.2 }
     );
 
     const botones = document.querySelectorAll(".cont-animado");
@@ -39,17 +42,29 @@ const home = () => {
       </div>
 
       <div className="mt-5 ">
-        <h1 className="aprendizaje">¿Como aprenderán en EuroKids?</h1>
+        <h1 className="aprendizaje m-0">¿Como aprenderán en EuroKids?</h1>
 
-        <Tabs defaultActiveKey="clases" id="aprendizaje-eurokids" className="mb-3 p-2 tabs-cont" variant="underline" transition={true}>
+        <Tabs defaultActiveKey="clases" id="aprendizaje-eurokids" className="p-2 tabs-cont" variant="underline" transition={true}>
           <Tab eventKey="clases" title="Clases interactivas">
             <Card className="card-cont">
               <Card.Body>
-                <Card.Title>Números y Lógica</Card.Title>
-                <Card.Text>
-                  Con juegos interactivos, los niños aprenderán a contar, sumar y desarrollar el pensamiento lógico.
+                <Card.Title>¡Sumérgete en el Aprendizaje Dinámico!</Card.Title>
+                <div className="d-flex justify-content-end">
+                  <img src={interactiva} alt="" className="img-interactiva me-5"/>
+                </div>
+                <Card.Text className="txt-card">
+                  Nuestras Clases Interactivas están diseñadas para transformar la manera en que adquieres nuevos conocimientos. Olvídate de las clases magistrales pasivas; aquí, tu participación activa es el motor de tu progreso. Empleamos una metodología probada que combina teoría, práctica inmediata y retroalimentación constante.
                 </Card.Text>
-                <Button variant="success">Ver Planes</Button>
+                <Card.Title className="mb-3">Características Principales de la Metodología:</Card.Title>
+                <ul className="text-list">
+                  <li><b>Sesiones de 90 Minutos Enfocadas:</b> Cada clase está meticulosamente estructurada para cubrir un tema específico a profundidad, asegurando una curva de aprendizaje óptima sin sobrecarga de información.</li>
+                  <li><b>Uso de Herramientas Digitales de Vanguardia:</b> Integramos pizarras virtuales colaborativas, encuestas en tiempo real, videos educativos cortos y simulaciones prácticas para mantener un ambiente de aprendizaje fresco y atractivo.</li>
+                  <li><b>Grupos Reducidos:</b> Mantenemos un límite estricto de estudiantes por clase (máximo 8) para garantizar que cada participante reciba atención personalizada y tenga amplias oportunidades para interactuar, hacer preguntas y practicar</li>
+                  <li><b>Proyectos Aplicados:</b> Al final de cada módulo temático, los estudiantes trabajan en un pequeño proyecto o caso de estudio que les permite aplicar inmediatamente lo aprendido en un contexto práctico, consolidando el conocimiento de manera efectiva.</li>
+                </ul>
+                <Nav.Link href="/" className="link-apren">
+                  <Button className="contact luz">Ver Planes</Button>
+                </Nav.Link>
               </Card.Body>
             </Card>
           </Tab>
@@ -57,39 +72,51 @@ const home = () => {
           <Tab eventKey="idiomas" title="Juegos">
             <Card className="card-cont">
               <Card.Body>
-                <Card.Title>Primeras Palabras</Card.Title>
-                <Card.Text>
-                  Clases didácticas y canciones para que los niños se familiaricen con el inglés de forma natural.
+                <Card.Title>Aprende Jugando</Card.Title>
+                <div className="d-flex justify-content-end">
+                  <img src={juegos} alt="" className="img-interactiva me-5"/>
+                </div>
+                <Card.Text className="txt-card">
+                  La sección de Juegos convierte la adquisición de habilidades en una experiencia lúdica y competitiva. Creemos que la diversión y la motivación son elementos clave para la retención a largo plazo. Nuestra plataforma ofrece una amplia biblioteca de juegos educativos que refuerzan los conceptos aprendidos en las clases interactivas de una forma entretenida.
                 </Card.Text>
-                <Button variant="info">Ver Horarios</Button>
+                <Card.Title className="mb-3">Tipos de Juegos:</Card.Title>
+                <ul className="text-list">
+                  <li><b>Trivia de Alto Riesgo:</b> Pon a prueba tus conocimientos sobre conceptos clave a través de cuestionarios rápidos con tiempo limitado. Gana puntos extra por rachas de respuestas correctas.</li>
+                  <li><b>Simuladores de Escenarios:</b> Resuelve problemas complejos en entornos virtuales que replican situaciones reales. Por ejemplo, gestiona un proyecto de inicio a fin o diagnostica un error de codificación. Tu desempeño tiene un impacto directo en el "resultado" del juego.</li>
+                  <li><b>Desafíos Colaborativos:</b> Únete a otros estudiantes para resolver acertijos y misiones que requieren trabajo en equipo y comunicación efectiva. La meta es alcanzar un objetivo común antes que el tiempo se agote.</li>
+                </ul>
+                <Nav.Link href="/" className="link-apren">
+                  <Button className="contact luz">Ver Planes</Button>
+                </Nav.Link>
               </Card.Body>
             </Card>
           </Tab>
 
-          <Tab eventKey="arte" title="Platicas">
+          <Tab eventKey="arte" title="Club de conversación">
             <Card className="card-cont">
               <Card.Body>
-                <Card.Title>Expresión y Color</Card.Title>
-                <Card.Text>
-                  Desarrollo de habilidades motoras finas a través de pintura, modelado y música.
+                <Card.Title>Platicas uno a uno</Card.Title>
+                <div className="d-flex justify-content-end">
+                  <img src={platica} alt="" className="img-interactiva me-5"/>
+                </div>
+                <Card.Text className="txt-card">
+                  El Club de Conversación es el espacio ideal para llevar tus habilidades teóricas a la práctica social. Este club está diseñado para mejorar tu fluidez, confianza y capacidad de comunicarte en contextos informales y profesionales. No se trata de otra clase; es un punto de encuentro con la comunidad.
                 </Card.Text>
-                <Button variant="warning">Explorar</Button>
+                <Card.Title className="mb-3">Estructura y Enfoque del Club:</Card.Title>
+                <ul className="text-list">
+                  <li><b>Sesiones Temáticas Semanales:</b> Cada sesión se centra en un tema de actualidad, cultura o interés profesional (ej. "El Futuro del Trabajo Remoto", "Impacto de la IA en la Creatividad"). Se proporciona material de lectura o un video corto como punto de partida para el debate.</li>
+                  <li><b>Moderadores Bilingües y Expertos:</b> Contamos con moderadores que son expertos en la materia o nativos de la lengua de práctica. Su rol es asegurar que la conversación fluya de manera natural, corregir errores sutiles de pronunciación o gramática en contexto y garantizar la participación equitativa de todos.</li>
+                  <li><b>Formato de "Breakout Rooms" (Salas Pequeñas):</b> Después de una introducción general, dividimos a los participantes en grupos de 3-4 personas para discusiones más íntimas y enfocadas, lo que permite a todos tener más tiempo de palabra.</li>
+                </ul>
+                <Nav.Link href="/" className="link-apren">
+                  <Button className="contact luz">Ver Planes</Button>
+                </Nav.Link>
               </Card.Body>
             </Card>
           </Tab>
         </Tabs>
       </div>
-
-      {/*
-      <div className="presentacion">
-        <div></div>
-        <div></div>
-      </div>
-      */}
       <div className="Prueba"></div>
-      <div id="homes"></div>
-      <h1>hola</h1>
-      <img src="./assets/img/Euro-centro-lg.png" alt="" />
     </>
   )
 }
