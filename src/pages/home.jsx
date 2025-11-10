@@ -1,6 +1,7 @@
 import NavbarP from "../components/layout/Navbar"
 import {Container, Card, Nav, Button, Tab, Tabs, CardImg} from "react-bootstrap"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 import interactiva from "../assets/img/cls-interactiva.jpg"
 import juegos from "../assets/img/cls-juegos.jpg"
 import platica from "../assets/img/cls-platica.jpeg"
@@ -28,6 +29,9 @@ const home = () => {
     };
   }, []);
 
+  /*Prueba */
+  const [activeTab, setActiveTab] = useState('opcion1');
+
   return (
     <>
       <NavbarP/>
@@ -42,8 +46,7 @@ const home = () => {
       </div>
 
       <div className="mt-5 ">
-        <h1 className="aprendizaje m-0">¿Como aprenderán en EuroKids?</h1>
-
+        <h1 className="aprendizaje m-0 p-3">¿Como aprenderán en EuroKids?</h1>
         <Tabs defaultActiveKey="clases" id="aprendizaje-eurokids" className="p-2 tabs-cont" variant="underline" transition={true}>
           <Tab eventKey="clases" title="Clases interactivas">
             <Card className="card-cont">
@@ -115,6 +118,31 @@ const home = () => {
             </Card>
           </Tab>
         </Tabs>
+      </div>
+      <div className="metodos mt-4">
+        <h1>¿Como enseñamos?</h1>
+        <div className="cont-met d-flex">
+          <div className="op-met">
+            <h4 onMouseEnter={() => setActiveTab('opcion1')} style={{ fontWeight: activeTab === 'opcion1' ? 'bold' : 'normal' }}>Seguridad en el aula</h4>
+            <h4 onMouseEnter={() => setActiveTab('opcion2')} style={{ fontWeight: activeTab === 'opcion2' ? 'bold' : 'normal' }}>Como enseñamos</h4>
+            <h4 onMouseEnter={() => setActiveTab('opcion3')} style={{ fontWeight: activeTab === 'opcion3' ? 'bold' : 'normal' }}>Docentes</h4>
+          </div>
+          <SwitchTransition mode="out-in">
+            <CSSTransition key={activeTab} timeout={300} classNames="fade">
+              <div className="desc-met">
+                {activeTab === 'opcion1' &&(
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti odio corporis maxime consequatur provident dolorum, molestiae ducimus! Neque, similique, doloribus hic sint, mollitia animi facilis tenetur non dolore quod commodi.</div>
+                )}
+                {activeTab === 'opcion2' &&(
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto culpa consequuntur incidunt iure unde fugit at perspiciatis ullam suscipit voluptate veritatis beatae eveniet enim, recusandae exercitationem, atque omnis, fugiat rerum?</div>
+                )}
+                {activeTab === 'opcion3' &&(
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestias nesciunt minima ipsum earum beatae reiciendis maxime, quaerat iste laboriosam quasi sit nulla nostrum sed? Assumenda facilis saepe sunt velit.</div>
+                )}
+              </div>
+            </CSSTransition>
+          </SwitchTransition>
+        </div>
       </div>
       <div className="Prueba"></div>
     </>

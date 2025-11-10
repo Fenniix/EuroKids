@@ -64,6 +64,8 @@
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   background-color: blueviolet;
+  text-align: center;
+  color: white;
 }
 
 .tabs-cont{
@@ -144,6 +146,57 @@
   0% { left: -100%; }
   100% { left: 100%; }
 }
+
+/*Metodos*/
+
+.metodos{
+}
+
+.cont-met{
+}
+
+.op-met{
+  width: 30%;
+  cursor: pointer;
+}
+
+.op-met h4{
+  padding-inline: 12%;
+}
+
+.desc-met{
+  width: 100%;
+}
+
+
+/*
+  CSS para la animación (debe estar en tu archivo .css importado)
+*/
+
+/* 1. Estado Inicial (Antes de entrar/montarse) */
+.fade-enter {
+  opacity: 0; 
+}
+
+/* 2. Estado de Transición de Entrada (El que hace el fade-in) */
+.fade-enter-active {
+  opacity: 1; 
+  /* MUY IMPORTANTE: Define la duración de la transición aquí */
+  transition: opacity 300ms ease-in; 
+}
+
+/* 3. Estado Inicial de Salida (Elemento a punto de desmontarse) */
+.fade-exit {
+  opacity: 1; 
+}
+
+/* 4. Estado de Transición de Salida (El que hace el fade-out) */
+.fade-exit-active {
+  opacity: 0; 
+  /* MUY IMPORTANTE: Define la duración de la transición aquí */
+  transition: opacity 300ms ease-out;
+}
+
 
 .Prueba{
   height: 100rem;
