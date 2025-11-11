@@ -1,7 +1,7 @@
 import NavbarP from "../components/layout/Navbar"
-import {Container, Card, Nav, Button, Tab, Tabs, CardImg} from "react-bootstrap"
+import {Container, Card, Nav, Button, Tab, Tabs, Col, Row} from "react-bootstrap"
+import TestimonialCarousel from "../components/elements/Carrusel"
 import { useEffect, useState } from "react"
-import { CSSTransition, SwitchTransition } from "react-transition-group";
 import interactiva from "../assets/img/cls-interactiva.jpg"
 import juegos from "../assets/img/cls-juegos.jpg"
 import platica from "../assets/img/cls-platica.jpeg"
@@ -22,6 +22,28 @@ const home = () => {
     );
 
     const botones = document.querySelectorAll(".cont-animado");
+    botones.forEach((btn) => observer.observe(btn));
+
+    return () => {
+      botones.forEach((btn) => observer.unobserve(btn));
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible-2");
+          }else {
+            entry.target.classList.remove("visible-2")
+          }
+        });
+      },
+      { threshold: 0.2 } // se activa cuando el 20% es visible
+    );
+
+    const botones = document.querySelectorAll(".cont-animado2");
     botones.forEach((btn) => observer.observe(btn));
 
     return () => {
@@ -123,27 +145,80 @@ const home = () => {
         <h1>¿Como enseñamos?</h1>
         <div className="cont-met d-flex">
           <div className="op-met">
-            <h4 onMouseEnter={() => setActiveTab('opcion1')} style={{ fontWeight: activeTab === 'opcion1' ? 'bold' : 'normal' }}>Seguridad en el aula</h4>
-            <h4 onMouseEnter={() => setActiveTab('opcion2')} style={{ fontWeight: activeTab === 'opcion2' ? 'bold' : 'normal' }}>Como enseñamos</h4>
-            <h4 onMouseEnter={() => setActiveTab('opcion3')} style={{ fontWeight: activeTab === 'opcion3' ? 'bold' : 'normal' }}>Docentes</h4>
+            <h4 onMouseEnter={() => setActiveTab('opcion1')} style={{ background: activeTab === "opcion1" ? "white" : "transparent", filter: activeTab === "opcion1" ? "brightness(0.8)" : "brightness(0)"}} className="op-h4">Seguridad en el aula</h4>
+            <h4 onMouseEnter={() => setActiveTab('opcion2')} style={{ background: activeTab === "opcion2" ? "white" : "transparent", filter: activeTab === "opcion2" ? "brightness(0.8)" : "brightness(0)"}} className="op-h4">Como enseñamos</h4>
+            <h4 onMouseEnter={() => setActiveTab('opcion3')} style={{ background: activeTab === "opcion3" ? "white" : "transparent", filter: activeTab === "opcion3" ? "brightness(0.8)" : "brightness(0)"}} className="op-h4">Docentes</h4>
           </div>
-          <SwitchTransition mode="out-in">
-            <CSSTransition key={activeTab} timeout={300} classNames="fade">
-              <div className="desc-met">
-                {activeTab === 'opcion1' &&(
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti odio corporis maxime consequatur provident dolorum, molestiae ducimus! Neque, similique, doloribus hic sint, mollitia animi facilis tenetur non dolore quod commodi.</div>
-                )}
-                {activeTab === 'opcion2' &&(
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto culpa consequuntur incidunt iure unde fugit at perspiciatis ullam suscipit voluptate veritatis beatae eveniet enim, recusandae exercitationem, atque omnis, fugiat rerum?</div>
-                )}
-                {activeTab === 'opcion3' &&(
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestias nesciunt minima ipsum earum beatae reiciendis maxime, quaerat iste laboriosam quasi sit nulla nostrum sed? Assumenda facilis saepe sunt velit.</div>
-                )}
-              </div>
-            </CSSTransition>
-          </SwitchTransition>
+          <div className="desc-met">
+            {activeTab === "opcion1" &&(
+              <Row xs={2} md={2} lg={2} className="gx-4 gt-0 cont-card">
+                <Col>
+                  <Card className="card-opc mb-4">
+                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Body>
+                      <Card.Title>Card title</Card.Title>
+                      <Card.Text>
+                        This is a longer card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                
+                <Col>
+                  <Card className="card-opc mb-4">
+                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Body>
+                      <Card.Title>Card title</Card.Title>
+                      <Card.Text>
+                        This is a longer card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+
+                <Col>
+                  <Card className="card-opc">
+                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Body>
+                      <Card.Title>Card title</Card.Title>
+                      <Card.Text>
+                        This is a longer card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+
+                <Col>
+                  <Card className="card-opc">
+                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Body>
+                      <Card.Title>Card title</Card.Title>
+                      <Card.Text>
+                        This is a longer card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+            )}
+            {activeTab === "opcion2" &&(
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto culpa consequuntur incidunt iure unde fugit at perspiciatis ullam suscipit voluptate veritatis beatae eveniet enim, recusandae exercitationem, atque omnis, fugiat rerum?</div>
+            )}
+            {activeTab === "opcion3" &&(
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestias nesciunt minima ipsum earum beatae reiciendis maxime, quaerat iste laboriosam quasi sit nulla nostrum sed? Assumenda facilis saepe sunt velit.</div>
+            )}
+          </div>
         </div>
       </div>
+      <TestimonialCarousel/>
       <div className="Prueba"></div>
     </>
   )

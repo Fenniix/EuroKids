@@ -160,43 +160,35 @@
   cursor: pointer;
 }
 
-.op-met h4{
-  padding-inline: 12%;
+.op-h4{
+  transition: all 0.3s ease;
+  border-radius: 0.2rem;
+  padding-inline: 14%;
+  padding-block: 1%;
 }
 
 .desc-met{
   width: 100%;
+  position: relative;
 }
 
-
-/*
-  CSS para la animación (debe estar en tu archivo .css importado)
-*/
-
-/* 1. Estado Inicial (Antes de entrar/montarse) */
-.fade-enter {
-  opacity: 0; 
+.cont-card{
+  margin: 0;
 }
 
-/* 2. Estado de Transición de Entrada (El que hace el fade-in) */
-.fade-enter-active {
-  opacity: 1; 
-  /* MUY IMPORTANTE: Define la duración de la transición aquí */
-  transition: opacity 300ms ease-in; 
+.card-opc{
 }
 
-/* 3. Estado Inicial de Salida (Elemento a punto de desmontarse) */
-.fade-exit {
-  opacity: 1; 
+.cont-animado2{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* 4. Estado de Transición de Salida (El que hace el fade-out) */
-.fade-exit-active {
-  opacity: 0; 
-  /* MUY IMPORTANTE: Define la duración de la transición aquí */
-  transition: opacity 300ms ease-out;
+.cont-animado2.visible-2{
+  opacity: 1;
+  transform: translateY(0);
 }
-
 
 .Prueba{
   height: 100rem;
