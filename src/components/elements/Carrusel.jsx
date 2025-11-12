@@ -1,49 +1,85 @@
-import { Carousel } from 'react-bootstrap';
+import { Card, Carousel } from 'react-bootstrap';
 
-function TestimonialCarousel() {
+function Carrusel() {
   return (
-    <div className="my-5" style={{ padding: '0 50px' }}>
-      <h2 className="text-center mb-4">Lo que dicen nuestros estudiantes</h2>
-      
-      <Carousel 
-        // Desactiva los controles de "Siguiente" y "Anterior"
-        controls={false} 
-        // Desactiva los indicadores de posición (los puntos inferiores)
-        indicators={false} 
-        // Establece el tiempo de pausa entre diapositivas (3 segundos)
-        interval={3000} 
-        // Detiene la reproducción al pasar el cursor (Opcional)
-        pause={false}
-      >
-        
-        {/* Item 1: Comentario de Juan */}
+    <div className="carrusel-section">
+      <h2 className="text-center m-0 pt-4 pb-4">Lo que dicen nuestros estudiantes</h2>
+      <Carousel controls={false} indicators={false} interval={3000} pause={false}>
+        {/*Comentario 1*/}
         <Carousel.Item>
-          <div className="d-flex flex-column align-items-center text-center p-4" style={{ height: '200px', backgroundColor: '#f8f9fa', borderRadius: '8px' }}>
-            <p className="lead">
-              "Las clases interactivas han transformado mi manera de aprender. La metodología es práctica y el ambiente es siempre motivador."
-            </p>
-            <p className="fw-bold mt-3">- Juan P., Estudiante Avanzado</p>
+          <div className='d-flex carrusel-cont'>
+            <Card className='card-d'>
+              <Card.Body>
+                <Card.Title>Card title</Card.Title>
+                <Card.Text>
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+
+            <Card className='card-d'>
+              <Card.Body>
+                <Card.Title>Card title</Card.Title>
+                <Card.Text>
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+
+            <Card className='card-d'>
+              <Card.Body>
+                <Card.Title>Card title</Card.Title>
+                <Card.Text>
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </Card.Text>
+              </Card.Body>
+            </Card>
           </div>
         </Carousel.Item>
 
-        {/* Item 2: Comentario de María */}
+        {/*Comentario 2*/}
         <Carousel.Item>
-          <div className="d-flex flex-column align-items-center text-center p-4" style={{ height: '200px', backgroundColor: '#e9ecef', borderRadius: '8px' }}>
-            <p className="lead">
-              "El club de conversación es genial para practicar fluidez sin la presión de un examen. ¡Lo recomiendo a todos!"
-            </p>
-            <p className="fw-bold mt-3">- María G., Club de Conversación</p>
-          </div>
-        </Carousel.Item>
+          <div className='d-flex carrusel-cont'>
+            <Card className='card-d'>
+              <Card.Body>
+                <Card.Title>Card title</Card.Title>
+                <Card.Text>
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </Card.Text>
+              </Card.Body>
+            </Card>
 
-        {/* Item 3: Comentario de Carlos */}
-        <Carousel.Item>
-          <div className="d-flex flex-column align-items-center text-center p-4" style={{ height: '200px', backgroundColor: '#dee2e6', borderRadius: '8px' }}>
-            <p className="lead">
-              "Los juegos son una forma muy divertida de reforzar los temas. ¡Nunca pensé que aprender sería tan entretenido!"
-            </p>
-            <p className="fw-bold mt-3">- Carlos M., Jugador Estrella</p>
+            <Card className='card-d'>
+              <Card.Body>
+                <Card.Title>Card title</Card.Title>
+                <Card.Text>
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+
+            <Card className='card-d'>
+              <Card.Body>
+                <Card.Title>Card title</Card.Title>
+                <Card.Text>
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </Card.Text>
+              </Card.Body>
+            </Card>
           </div>
+              
         </Carousel.Item>
       
       </Carousel>
@@ -51,4 +87,4 @@ function TestimonialCarousel() {
   );
 }
 
-export default TestimonialCarousel;
+export default Carrusel;

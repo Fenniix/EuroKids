@@ -1,13 +1,17 @@
 import NavbarP from "../components/layout/Navbar"
-import {Container, Card, Nav, Button, Tab, Tabs, Col, Row} from "react-bootstrap"
-import TestimonialCarousel from "../components/elements/Carrusel"
+import {Container, Card, Nav, Button, Tab, Tabs, Collapse} from "react-bootstrap"
+import Carrusel from "../components/elements/Carrusel"
 import { useEffect, useState } from "react"
 import interactiva from "../assets/img/cls-interactiva.jpg"
 import juegos from "../assets/img/cls-juegos.jpg"
 import platica from "../assets/img/cls-platica.jpeg"
 import "../styles/home.css"
+import Cards from "../components/elements/Cards"
+import CardP from "../components/elements/CardP"
 
 const home = () => {
+
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -141,8 +145,14 @@ const home = () => {
           </Tab>
         </Tabs>
       </div>
+
+      <div className="promociones">
+        <CardP/>
+      </div>
+
+      <Carrusel/>
       <div className="metodos mt-4">
-        <h1>¿Como enseñamos?</h1>
+        <h1 className="backg-h1">¿Como enseñamos?</h1>
         <div className="cont-met d-flex">
           <div className="op-met">
             <h4 onMouseEnter={() => setActiveTab('opcion1')} style={{ background: activeTab === "opcion1" ? "white" : "transparent", filter: activeTab === "opcion1" ? "brightness(0.8)" : "brightness(0)"}} className="op-h4">Seguridad en el aula</h4>
@@ -151,75 +161,58 @@ const home = () => {
           </div>
           <div className="desc-met">
             {activeTab === "opcion1" &&(
-              <Row xs={2} md={2} lg={2} className="gx-4 gt-0 cont-card">
-                <Col>
-                  <Card className="card-opc mb-4">
-                    <Card.Img variant="top" src="holder.js/100px160" />
-                    <Card.Body>
-                      <Card.Title>Card title</Card.Title>
-                      <Card.Text>
-                        This is a longer card with supporting text below as a natural
-                        lead-in to additional content. This content is a little bit
-                        longer.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                
-                <Col>
-                  <Card className="card-opc mb-4">
-                    <Card.Img variant="top" src="holder.js/100px160" />
-                    <Card.Body>
-                      <Card.Title>Card title</Card.Title>
-                      <Card.Text>
-                        This is a longer card with supporting text below as a natural
-                        lead-in to additional content. This content is a little bit
-                        longer.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-
-                <Col>
-                  <Card className="card-opc">
-                    <Card.Img variant="top" src="holder.js/100px160" />
-                    <Card.Body>
-                      <Card.Title>Card title</Card.Title>
-                      <Card.Text>
-                        This is a longer card with supporting text below as a natural
-                        lead-in to additional content. This content is a little bit
-                        longer.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-
-                <Col>
-                  <Card className="card-opc">
-                    <Card.Img variant="top" src="holder.js/100px160" />
-                    <Card.Body>
-                      <Card.Title>Card title</Card.Title>
-                      <Card.Text>
-                        This is a longer card with supporting text below as a natural
-                        lead-in to additional content. This content is a little bit
-                        longer.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </Row>
+              <Cards/>
             )}
             {activeTab === "opcion2" &&(
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto culpa consequuntur incidunt iure unde fugit at perspiciatis ullam suscipit voluptate veritatis beatae eveniet enim, recusandae exercitationem, atque omnis, fugiat rerum?</div>
+              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto culpa consequuntur incidunt iure unde fugit at perspiciatis ullam suscipit voluptate veritatis beatae eveniet enim, recusandae exercitationem, atque omnis, fugiat rerum?</div>
             )}
             {activeTab === "opcion3" &&(
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestias nesciunt minima ipsum earum beatae reiciendis maxime, quaerat iste laboriosam quasi sit nulla nostrum sed? Assumenda facilis saepe sunt velit.</div>
+              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestias nesciunt minima ipsum earum beatae reiciendis maxime, quaerat iste laboriosam quasi sit nulla nostrum sed? Assumenda facilis saepe sunt velit.</div>
             )}
           </div>
         </div>
       </div>
-      <TestimonialCarousel/>
-      <div className="Prueba"></div>
+
+      <div className="preguntas d-flex flex-column align-items-center">
+
+        <Button onClick={() => setOpen(!open)} aria-controls="example-collapse-text" aria-expanded={open}>
+          Pregunta1
+        </Button>
+        <Collapse in={open}>
+          <div id="example-collapse-text" className="respuesta">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
+            labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </Collapse>
+
+        <Button onClick={() => setOpen(!open)} aria-controls="example-collapse-text mt-5" aria-expanded={open}>
+          Pregunta1
+        </Button>
+        <Collapse in={open}>
+          <div id="example-collapse-text" className="respuesta">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
+            labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </Collapse>
+
+        <Button onClick={() => setOpen(!open)} aria-controls="example-collapse-text" aria-expanded={open}>
+          Pregunta1
+        </Button>
+        <Collapse in={open}>
+          <div id="example-collapse-text" className="respuesta">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
+            labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </Collapse>
+
+      </div>
+
+      <footer className="">
+        <h1>footer</h1>
+      </footer>
     </>
   )
 }

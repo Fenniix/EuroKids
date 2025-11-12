@@ -147,9 +147,22 @@
   100% { left: 100%; }
 }
 
+/*Promociones*/
+.promociones{
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  gap: 6rem;
+}
+
 /*Metodos*/
 
 .metodos{
+  height: 35rem;
+}
+
+.backg-h1{
+  text-align: center;
 }
 
 .cont-met{
@@ -188,6 +201,72 @@
 .cont-animado2.visible-2{
   opacity: 1;
   transform: translateY(0);
+}
+
+/*Preguntas*/
+
+.preguntas{
+}
+
+.respuesta{
+  width: 60%;
+}
+
+/*Elementos*/
+
+/*Carrusel*/
+
+.carrusel-section{
+  background-color: #9370DB;
+  padding-bottom: 3rem;
+}
+
+.carrusel-cont{
+  gap: 3rem;
+  justify-content: center;
+}
+
+.card-d{
+  width: 25%;
+  background-color: #98FF98;
+}
+
+/*Card Promociones*/
+
+.card-p{
+  width: 50%;
+  height: 20rem;
+  background-color: antiquewhite;
+}
+
+.animate-p-left{
+  opacity: 0;
+}
+
+.animate-p-right{
+  opacity: 0;
+}
+
+.animate-p-left.visible-p-left{
+  opacity: 1;
+  animation: salto-left 2s ease-in-out;
+}
+
+.animate-p-right.visible-p-right{
+  opacity: 1;
+  animation: salto-right 2s ease-in-out;
+}
+
+@keyframes salto-left {
+  0% { transform: translateX(100%); }
+  50% { transform: translateX(-125px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes salto-right {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(125px); }
+  100% { transform: translateX(0); }
 }
 
 .Prueba{
