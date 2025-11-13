@@ -205,11 +205,14 @@
 
 /*Preguntas*/
 
-.preguntas{
+.pregunta{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 
 .respuesta{
-  width: 60%;
 }
 
 /*Elementos*/
@@ -233,9 +236,48 @@
 
 /*Card Promociones*/
 
-.card-p{
+.txt-cardP-left{
+  position: absolute;
   width: 50%;
   height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.txt-cardP-right{
+  width: 50%;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.posicion-p{
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+/*Tarjeta derecha*/
+.card-pd{
+  width: 40%;
+  height: 28rem;
+  border-radius: 0;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  background-color: antiquewhite;
+}
+
+/*Tarjeta izquierda*/
+.card-pi{
+  width: 40%;
+  height: 28rem;
+  border-radius: 0;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
   background-color: antiquewhite;
 }
 
@@ -249,23 +291,23 @@
 
 .animate-p-left.visible-p-left{
   opacity: 1;
-  animation: salto-left 2s ease-in-out;
+  animation: salto-left 1.5s ease-in-out;
 }
 
 .animate-p-right.visible-p-right{
   opacity: 1;
-  animation: salto-right 2s ease-in-out;
+  animation: salto-right 1.5s ease-in-out;
 }
 
 @keyframes salto-left {
   0% { transform: translateX(100%); }
-  50% { transform: translateX(-125px); }
+  50% { transform: translateX(-60px); }
   100% { transform: translateX(0); }
 }
 
 @keyframes salto-right {
   0% { transform: translateX(-100%); }
-  50% { transform: translateX(125px); }
+  50% { transform: translateX(60px); }
   100% { transform: translateX(0); }
 }
 

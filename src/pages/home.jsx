@@ -8,10 +8,9 @@ import platica from "../assets/img/cls-platica.jpeg"
 import "../styles/home.css"
 import Cards from "../components/elements/Cards"
 import CardP from "../components/elements/CardP"
+import Preguntas from "../components/elements/PreguntasCol"
 
 const home = () => {
-
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -172,43 +171,9 @@ const home = () => {
           </div>
         </div>
       </div>
-
-      <div className="preguntas d-flex flex-column align-items-center">
-
-        <Button onClick={() => setOpen(!open)} aria-controls="example-collapse-text" aria-expanded={open}>
-          Pregunta1
-        </Button>
-        <Collapse in={open}>
-          <div id="example-collapse-text" className="respuesta">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-            terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-            labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
-        </Collapse>
-
-        <Button onClick={() => setOpen(!open)} aria-controls="example-collapse-text mt-5" aria-expanded={open}>
-          Pregunta1
-        </Button>
-        <Collapse in={open}>
-          <div id="example-collapse-text" className="respuesta">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-            terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-            labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
-        </Collapse>
-
-        <Button onClick={() => setOpen(!open)} aria-controls="example-collapse-text" aria-expanded={open}>
-          Pregunta1
-        </Button>
-        <Collapse in={open}>
-          <div id="example-collapse-text" className="respuesta">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-            terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-            labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
-        </Collapse>
-
-      </div>
+      
+      {/*Preguntas frecuentes*/}
+      <Preguntas/>
 
       <footer className="">
         <h1>footer</h1>

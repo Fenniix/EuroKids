@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Card } from "react-bootstrap"
+import { Card, CardImg } from "react-bootstrap"
 import "../../styles/home.css"
 
 const CardP = () => {
@@ -46,22 +46,43 @@ const CardP = () => {
 
   return (
     <>
-      <div className="d-flex mt-5 justify-content-end overflow-hidden">
-        <Card className="card-p animate-p-left">
-          <Card.Title>hsbajbsdiawbu</Card.Title>
-        </Card> 
-      </div>
-
-      <div className="d-flex mt-5 justify-content-start">
-        <Card className="card-p animate-p-right">
-          <Card.Title>hsbajbsdiawbu</Card.Title>
-        </Card> 
+      <div className="mt-5">
+        <div className="txt-cardP-left animate-p-right">
+          <h1>HAJKndjka</h1>
+          <p>njkanska</p>
+        </div>
+        <div className="d-flex justify-content-end overflow-hidden">
+          <Card className="card-pd animate-p-left">
+            <CardImg></CardImg>
+          </Card> 
+        </div>
       </div>
       
-      <div className="d-flex mt-5 mb-5 justify-content-end overflow-hidden">
-        <Card className="card-p animate-p-left">
-          <Card.Title>hsbajbsdiawbu</Card.Title>
-        </Card> 
+      <div className="mt-5">
+        <div className="posicion-p d-flex justify-content-end">
+          <div className="txt-cardP-right animate-p-left">
+            <h1>HAJKndjka</h1>
+            <p>njkanska</p>
+          </div>
+        </div>
+        <div className="d-flex justify-content-start">
+          <Card className="card-pi animate-p-right">
+            <CardImg></CardImg>
+          </Card> 
+        </div>
+      </div>
+
+      
+      <div className="mt-5 mb-5">
+        <div className="txt-cardP-left animate-p-right">
+          <h1>HAJKndjka</h1>
+          <p>njkanska</p>
+        </div>
+        <div className="d-flex justify-content-end overflow-hidden">
+          <Card className="card-pd animate-p-left">
+            <CardImg></CardImg>
+          </Card> 
+        </div>
       </div>
     </>
   )
