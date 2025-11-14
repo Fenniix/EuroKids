@@ -1,0 +1,174 @@
+/* Galeria de imagenes*/
+
+/* Contenedor principal de la galería */
+.galeria-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 2rem auto;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* 1. La cuadrícula de imágenes */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* 2. Cada item (thumbnail) */
+.galeria-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  
+  /* ¡Aquí la primera animación! 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* La animación HOVER que mencionamos 
+.galeria-item:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}*/
+
+/* 3. El Modal (Fondo oscuro) */
+.modal-galeria {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  /* ¡Animación Fade-in para el fondo! 
+  animation: fadeIn 0.3s ease;*/
+}
+
+/* 4. El contenido del Modal (¡Ahora con Flexbox!) */
+.modal-contenido {
+  display: flex; /* ¡LA CLAVE! */
+  flex-direction: row; /* Hijos en fila (izquierda a derecha) */
+  align-items: center; /* Centrar verticalmente */
+  
+  background-color: white;
+  padding: 2rem; /* Más padding para que respire */
+  border-radius: 8px;
+  max-width: 80%; /* Más ancho para que quepan ambos */
+  max-height: 90vh;
+  position: relative;
+  gap: 2rem; /* Un espacio entre la columna de texto y la de imagen */
+  overflow: hidden; /* Para que las esquinas redondeadas funcionen */
+
+  /* Mantenemos la animación de entrada 
+  animation: slideDown 0.4s ease-out;*/
+}
+
+/* Columna de Texto (Izquierda) */
+.modal-col-texto {
+  flex: 1; /* Ocupa 1 parte del espacio */
+  min-width: 250px; /* Ancho mínimo */
+  color: #333;
+}
+
+.modal-col-texto h3 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.modal-col-texto p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Columna de Imagen (Derecha) */
+.modal-col-imagen {
+  flex: 1.5; /* Ocupa 1.5 partes (un poco más grande) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-col-imagen img {
+  width: 100%;
+  height: auto;
+  max-height: 75vh; /* Límite de altura */
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* 5. El botón de cerrar (X) */
+.modal-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-cerrar:hover {
+  color: #000;
+}
+
+
+/* 6. Keyframes para las animaciones 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { 
+    opacity: 0;
+    transform: translateY(-30px); 
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}*/
+
+/* ---- Media Query para Móviles ---- */
+@media (max-width: 768px) {
+  
+  .modal-contenido {
+    flex-direction: column; /* Apila las columnas (vertical) */
+    max-width: 90%;
+    max-height: 95vh;
+    padding: 1.5rem;
+    overflow-y: auto; /* Permite scroll si el texto es largo */
+    gap: 1.5rem;
+  }
+
+  .modal-col-texto {
+    order: 2; /* Mueve el texto para abajo */
+    min-width: unset; /* Resetea el ancho mínimo */
+  }
+
+  .modal-col-imagen {
+    order: 1; /* Mueve la imagen para arriba */
+    flex: 1; /* Resetea el flex */
+    width: 100%;
+  }
+
+  .modal-col-texto h3 {
+    font-size: 1.5rem;
+  }
+}

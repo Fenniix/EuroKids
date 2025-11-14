@@ -152,7 +152,7 @@
   display: flex;
   flex-direction: column;
   height: max-content;
-  gap: 6rem;
+  text-align: center;
 }
 
 /*Metodos*/
@@ -207,9 +207,6 @@
 
 .pregunta{
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
 }
 
 .respuesta{
@@ -246,6 +243,10 @@
   align-items: center;
 }
 
+.txt-cardP-left p{
+  width: 85%;
+}
+
 .txt-cardP-right{
   width: 50%;
   height: 20rem;
@@ -253,6 +254,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.txt-cardP-right p{
+  width: 85%;
 }
 
 .posicion-p{

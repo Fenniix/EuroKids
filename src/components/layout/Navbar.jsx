@@ -1,12 +1,11 @@
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
-import LogoEK from "../../assets/img/Euro-centro-lg.png";
 
 const NavbarP = () => {
   return (
     <Navbar  expand="lg" className="Nav">
       <Container className="cont-nav">
         <Navbar.Brand href="#home">
-          <img alt="" src={LogoEK} height="60" className="d-inline-block align-top me-2"/>
+          <img alt="" src="src/assets/img/Euro-centro-lg.png" height="60" className="d-inline-block align-top me-2"/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

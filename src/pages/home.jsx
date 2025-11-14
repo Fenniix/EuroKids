@@ -2,13 +2,11 @@ import NavbarP from "../components/layout/Navbar"
 import {Container, Card, Nav, Button, Tab, Tabs, Collapse} from "react-bootstrap"
 import Carrusel from "../components/elements/Carrusel"
 import { useEffect, useState } from "react"
-import interactiva from "../assets/img/cls-interactiva.jpg"
-import juegos from "../assets/img/cls-juegos.jpg"
-import platica from "../assets/img/cls-platica.jpeg"
 import "../styles/home.css"
 import Cards from "../components/elements/Cards"
 import CardP from "../components/elements/CardP"
 import Preguntas from "../components/elements/PreguntasCol"
+import GaleriaAni from "../components/elements/Galeria-A"
 
 const home = () => {
 
@@ -78,7 +76,7 @@ const home = () => {
               <Card.Body>
                 <Card.Title>¡Sumérgete en el Aprendizaje Dinámico!</Card.Title>
                 <div className="d-flex justify-content-end">
-                  <img src={interactiva} alt="" className="img-interactiva me-5"/>
+                  <img src="src/assets/img/cls-interactiva.jpg" alt="" className="img-interactiva me-5"/>
                 </div>
                 <Card.Text className="txt-card">
                   Nuestras Clases Interactivas están diseñadas para transformar la manera en que adquieres nuevos conocimientos. Olvídate de las clases magistrales pasivas; aquí, tu participación activa es el motor de tu progreso. Empleamos una metodología probada que combina teoría, práctica inmediata y retroalimentación constante.
@@ -97,12 +95,12 @@ const home = () => {
             </Card>
           </Tab>
 
-          <Tab eventKey="idiomas" title="Juegos">
+          <Tab eventKey="juegos" title="Juegos">
             <Card className="card-cont">
               <Card.Body>
                 <Card.Title>Aprende Jugando</Card.Title>
                 <div className="d-flex justify-content-end">
-                  <img src={juegos} alt="" className="img-interactiva me-5"/>
+                  <img src="src/assets/img/cls-juegos.jpg" alt="" className="img-interactiva me-5"/>
                 </div>
                 <Card.Text className="txt-card">
                   La sección de Juegos convierte la adquisición de habilidades en una experiencia lúdica y competitiva. Creemos que la diversión y la motivación son elementos clave para la retención a largo plazo. Nuestra plataforma ofrece una amplia biblioteca de juegos educativos que refuerzan los conceptos aprendidos en las clases interactivas de una forma entretenida.
@@ -120,12 +118,12 @@ const home = () => {
             </Card>
           </Tab>
 
-          <Tab eventKey="arte" title="Club de conversación">
+          <Tab eventKey="club" title="Club de conversación">
             <Card className="card-cont">
               <Card.Body>
                 <Card.Title>Platicas uno a uno</Card.Title>
                 <div className="d-flex justify-content-end">
-                  <img src={platica} alt="" className="img-interactiva me-5"/>
+                  <img src="src/assets/img/cls-platica.jpeg" alt="" className="img-interactiva me-5"/>
                 </div>
                 <Card.Text className="txt-card">
                   El Club de Conversación es el espacio ideal para llevar tus habilidades teóricas a la práctica social. Este club está diseñado para mejorar tu fluidez, confianza y capacidad de comunicarte en contextos informales y profesionales. No se trata de otra clase; es un punto de encuentro con la comunidad.
@@ -146,10 +144,15 @@ const home = () => {
       </div>
 
       <div className="promociones">
+        <h1 className="mt-4">Razones para elegir EuroKids</h1>
         <CardP/>
       </div>
-
+      
+      {/* Carrusel de comentarios */}
       <Carrusel/>
+
+      {/* Seccion - ¿Como enseñamos? */}
+      {/*
       <div className="metodos mt-4">
         <h1 className="backg-h1">¿Como enseñamos?</h1>
         <div className="cont-met d-flex">
@@ -171,7 +174,10 @@ const home = () => {
           </div>
         </div>
       </div>
-      
+      */}
+
+      <GaleriaAni/>
+
       {/*Preguntas frecuentes*/}
       <Preguntas/>
 
