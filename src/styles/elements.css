@@ -172,3 +172,88 @@
     font-size: 1.5rem;
   }
 }
+
+/*Footer*/
+
+
+
+.card-footer{
+  background-color: blueviolet;
+  border: 0;
+}
+
+.redes-icons{
+  width: 30px;
+}
+
+.link-width{
+  display: block;
+  width: max-content;
+}
+
+.icon-ani{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border-radius: 0.8rem;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.icon-ani:hover{
+  color: white;
+}
+
+.icon-ani::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  /*
+  transform: scale(0);
+  transform-origin: center;
+  border-radius: 2rem;
+  */
+}
+
+.icon-ani:hover::after{
+  transform: translateY(0%);
+  /*
+  transform: scale(1.2);
+  */
+}
+
+.ani-facebook::after {
+  background-color: #1877F2; /* Azul de Facebook */
+}
+
+.ani-instagram::after {
+  /* Degradado típico de Instagram (de morado a rojo/naranja) */
+  background-image: linear-gradient(
+    45deg,
+    #f09433 0%, /* Naranja */
+    #e6683c 25%, /* Rojo-Naranja */
+    #dc2743 50%, /* Rojo */
+    #cc2366 75%, /* Magenta */
+    #bc1888 100% /* Morado */
+  );
+}
+
+.ani-twitter::after {
+  background-color: #1DA1F2; /* Azul de Twitter */
+}
+
+
+.prueba-re{
+  display: flex;
+}

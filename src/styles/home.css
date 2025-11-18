@@ -84,7 +84,11 @@
   border-end-start-radius: 1rem;
   border-end-end-radius: 1rem;
 }
-
+/* Cambio de altura para no afectar al siguiente componente
+.card-b{
+  height: 35rem;
+}
+*/
 .txt-card{
   width: 50%;
 }
@@ -207,6 +211,7 @@
 
 .pregunta{
   width: 50%;
+  padding-block: 2.5rem;
 }
 
 .respuesta{

@@ -1,12 +1,13 @@
-import NavbarP from "../components/layout/Navbar"
-import {Container, Card, Nav, Button, Tab, Tabs, Collapse} from "react-bootstrap"
-import Carrusel from "../components/elements/Carrusel"
+import {Container, Card, Nav, Button, Tab, Tabs } from "react-bootstrap"
 import { useEffect, useState } from "react"
-import "../styles/home.css"
+import NavbarP from "../components/layout/Navbar"
+import Carrusel from "../components/elements/Carrusel"
 import Cards from "../components/elements/Cards"
 import CardP from "../components/elements/CardP"
 import Preguntas from "../components/elements/PreguntasCol"
 import GaleriaAni from "../components/elements/Galeria-A"
+import FooterP from "../components/layout/Footer"
+import "../styles/home.css"
 
 const home = () => {
 
@@ -73,7 +74,7 @@ const home = () => {
         <Tabs defaultActiveKey="clases" id="aprendizaje-eurokids" className="p-2 tabs-cont" variant="underline" transition={true}>
           <Tab eventKey="clases" title="Clases interactivas">
             <Card className="card-cont">
-              <Card.Body>
+              <Card.Body className="card-b">
                 <Card.Title>¡Sumérgete en el Aprendizaje Dinámico!</Card.Title>
                 <div className="d-flex justify-content-end">
                   <img src="src/assets/img/cls-interactiva.jpg" alt="" className="img-interactiva me-5"/>
@@ -97,7 +98,7 @@ const home = () => {
 
           <Tab eventKey="juegos" title="Juegos">
             <Card className="card-cont">
-              <Card.Body>
+              <Card.Body className="card-b">
                 <Card.Title>Aprende Jugando</Card.Title>
                 <div className="d-flex justify-content-end">
                   <img src="src/assets/img/cls-juegos.jpg" alt="" className="img-interactiva me-5"/>
@@ -120,7 +121,7 @@ const home = () => {
 
           <Tab eventKey="club" title="Club de conversación">
             <Card className="card-cont">
-              <Card.Body>
+              <Card.Body className="card-b">
                 <Card.Title>Platicas uno a uno</Card.Title>
                 <div className="d-flex justify-content-end">
                   <img src="src/assets/img/cls-platica.jpeg" alt="" className="img-interactiva me-5"/>
@@ -180,10 +181,7 @@ const home = () => {
 
       {/*Preguntas frecuentes*/}
       <Preguntas/>
-
-      <footer className="">
-        <h1>footer</h1>
-      </footer>
+      <FooterP/>
     </>
   )
 }
