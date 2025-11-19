@@ -1,5 +1,535 @@
 /* Galeria de imagenes*/
 
+/*Idiomas*/
+.idiomas-container {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9; /* Un gris muy clarito para separar sección */
+}
+
+.idiomas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+}
+
+/* --- CARD PEQUEÑA --- */
+.idioma-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px; /* Altura fija para uniformidad */
+  position: relative; /* Necesario para layoutId a veces */
+}
+
+.idioma-img-icono {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.idioma-titulo {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+}
+
+.ver-mas {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 1rem;
+  opacity: 0; /* Oculto normalmente */
+  transition: opacity 0.3s;
+}
+
+.idioma-card:hover .ver-mas {
+  opacity: 1; /* Visible al hover */
+}
+
+/* --- MODAL --- */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 998;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  pointer-events: none; /* Para poder clickear el overlay si quieres */
+}
+
+.idioma-modal {
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  pointer-events: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.modal-titulo {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.modal-img-icono-mini {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: left;
+}
+
+.modal-body p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: rgba(255,255,255,0.8);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.btn-info {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 55%;
+}
+
+/* Niveles */
+.niveles-section {
+  padding: 5rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.niveles-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.niveles-header p {
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.niveles-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Para que en móviles se pongan uno bajo otro */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nivel-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  overflow: hidden; /* Para que la cabecera de color respete el borde redondeado */
+  width: 300px; /* Ancho fijo para que parezcan columnas */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.nivel-card:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Cabecera de Color */
+.nivel-top {
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+.nivel-top h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* Cuerpo de la tarjeta */
+.nivel-body {
+  padding: 2rem;
+  flex: 1; /* Hace que ocupen todo el alto disponible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nivel-edad-badge {
+  background-color: #f0f0f0;
+  color: #555;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.nivel-desc {
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* La Checklist */
+.nivel-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  width: 100%;
+}
+
+.nivel-lista li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+.check-icon {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Botón al final */
+.nivel-btn {
+  margin-top: auto; /* Empuja el botón al final de la tarjeta */
+  background: transparent;
+  border: 2px solid #333; /* Se sobreescribe en el estilo en línea */
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nivel-btn:hover {
+  background-color: #f9f9f9;
+  transform: scale(1.05);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .niveles-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nivel-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+
+/* Niveles Camino */
+.camino-section {
+  padding: 5rem 1rem;
+  background-color: #f8faff; 
+  text-align: center;
+  overflow: hidden;
+}
+
+.camino-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.camino-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.camino-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alineado arriba para que si una lista es larga no deforme todo */
+  max-width: 1200px;
+  margin: 5rem auto 2rem auto; /* Más margen arriba para los iconos flotantes */
+  gap: 1rem;
+  position: relative;
+}
+
+.camino-step-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* --- LA TARJETA FUSIONADA --- */
+.camino-card {
+  background: white;
+  padding: 2rem 1.5rem;
+  /* Forma redondeada suave */
+  border-radius: 20px; 
+  width: 260px; /* Un poco más ancha */
+  /* Altura mínima para uniformidad */
+  min-height: 380px; 
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-bottom: 4px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+/* Icono Flotante */
+.camino-icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: white;
+  
+  /* Esto hace que flote fuera de la tarjeta */
+  position: absolute;
+  top: -40px; 
+  
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  border: 5px solid #f8faff; /* El borde simula transparencia con el fondo */
+}
+
+/* Ajuste de márgenes internos por el icono flotante */
+.camino-card h3 {
+  margin-top: 2.5rem; 
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.camino-edad {
+  background: #eee;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.camino-desc {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+/* --- LA CHECKLIST (Traída de la Opción 1) --- */
+.card-checklist {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: left; /* Alineamos el texto a la izquierda para facilitar lectura */
+  margin-top: auto; /* Empuja la lista hacia abajo si sobra espacio */
+}
+
+.card-checklist li {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-checklist li span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* --- FLECHA --- */
+.flecha-conector {
+  font-size: 2rem;
+  color: #ddd;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+/* --- RESPONSIVE (Móvil) --- */
+@media (max-width: 900px) {
+  .camino-container {
+    flex-direction: column; /* Se vuelve columna vertical */
+    align-items: center;
+    margin-top: 3rem;
+    gap: 4rem; /* Espacio entre tarjetas verticalmente */
+  }
+
+  .camino-step-wrapper {
+    flex-direction: column; /* Tarjeta arriba, flecha abajo */
+  }
+
+  .flecha-conector {
+    transform: rotate(90deg); /* Flecha apuntando abajo */
+    margin: 1.5rem 0 0 0;
+  }
+  
+  .camino-card {
+    width: 100%;
+    max-width: 320px; /* Un poco más anchas en móvil para leer bien */
+    min-height: auto;
+  }
+}
+
+/* Clase Muestra */
+.cta-section {
+  position: relative;
+  /* Degradado atractivo: Azul vibrante a Violeta */
+  background: linear-gradient(135deg, #4361ee 0%, #3f37c9 100%);
+  padding-top: 8rem; /* Espacio extra arriba para que el texto no toque la ola */
+  padding-bottom: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  text-align: center;
+  overflow: hidden; /* Importante para que el SVG no desborde */
+}
+
+/* Configuración del SVG */
+.custom-shape-divider-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(138% + 1.3px); /* Un poco más ancho para evitar bordes blancos */
+  height: 100px; /* Altura de la ola */
+}
+
+.custom-shape-divider-top .shape-fill {
+  fill: #FFFFFF; /* ¡IMPORTANTE! Debe coincidir con el fondo de la sección anterior */
+}
+
+/* Estilos del Contenido */
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.cta-content p {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* El Botón Gigante */
+.cta-btn {
+  background-color: #ffca3a; /* Amarillo/Naranja para contraste máximo con el azul */
+  color: #333;
+  border: none;
+  padding: 1.2rem 3.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-disclaimer {
+  font-size: 0.85rem !important; /* Forzamos tamaño pequeño */
+  margin-top: 2rem;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+  
+  .custom-shape-divider-top svg {
+    height: 60px; /* Ola más pequeña en móvil */
+  }
+  
+  .cta-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    width: 100%; /* Botón ancho completo en móvil */
+  }
+}
+
 /* Contenedor principal de la galería */
 .galeria-container {
   width: 90%;
@@ -174,8 +704,6 @@
 }
 
 /*Footer*/
-
-
 
 .card-footer{
   background-color: blueviolet;

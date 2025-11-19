@@ -1,12 +1,6 @@
 import {Container, Card, Nav, Button, Tab, Tabs } from "react-bootstrap"
 import { useEffect, useState } from "react"
-import NavbarP from "../components/layout/Navbar"
-import Carrusel from "../components/elements/Carrusel"
-import Cards from "../components/elements/Cards"
-import CardP from "../components/elements/CardP"
-import Preguntas from "../components/elements/PreguntasCol"
-import GaleriaAni from "../components/elements/Galeria-A"
-import FooterP from "../components/layout/Footer"
+import { FooterP, NavbarP, Carrusel, GaleriaAni, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra } from "../components"
 import "../styles/home.css"
 
 const home = () => {
@@ -68,6 +62,13 @@ const home = () => {
           {/*<p className="lead">¡Explora, aprende y diviértete!</p>*/}
         </Container>
       </div>
+      
+      {/* Idiomas */}
+      <Idiomas/>
+
+      {/* Niveles 
+      <Niveles/>*/}
+      
 
       <div className="mt-5 ">
         <h1 className="aprendizaje m-0 p-3">¿Como aprenderán en EuroKids?</h1>
@@ -143,11 +144,14 @@ const home = () => {
           </Tab>
         </Tabs>
       </div>
+      <NivelesCamino/>
+      <Niveles/>
 
       <div className="promociones">
         <h1 className="mt-4">Razones para elegir EuroKids</h1>
         <CardP/>
       </div>
+      <ClaseMuestra/>
       
       {/* Carrusel de comentarios */}
       <Carrusel/>
@@ -181,6 +185,7 @@ const home = () => {
 
       {/*Preguntas frecuentes*/}
       <Preguntas/>
+      
       <FooterP/>
     </>
   )

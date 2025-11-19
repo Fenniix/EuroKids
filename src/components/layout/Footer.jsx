@@ -29,11 +29,13 @@ const FooterP = () => {
             </div>
           </Card.Link>
 
+          {/* 
           <Card.Link href="https://react-bootstrap.github.io/" className="link-width">
             <div className="icon-ani">
               <Card.Img src="src/assets/icons/Github.png" className="redes-icons"></Card.Img>
             </div>
           </Card.Link>
+          */}
         </Card.Body>
 
         <Card.Body>
