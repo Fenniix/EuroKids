@@ -4,12 +4,11 @@ import { motion } from 'framer-motion';
 const nivelesData = [
   {
     id: 1,
-    titulo: "Baby Euro",
+    titulo: "Titulo",
     edad: "3 - 5 años",
     icono: "👶",
     descripcion: "Descubrimiento y Juegos",
     color: "#FFD166", 
-    // Traemos la checklist detallada de la opción 1
     features: [
       "Estimulación sensorial",
       "Canciones y juegos",
@@ -18,7 +17,7 @@ const nivelesData = [
   },
   {
     id: 2,
-    titulo: "Euro Kids",
+    titulo: "Titulo",
     edad: "6 - 9 años",
     icono: "👦",
     descripcion: "Crecimiento y Creatividad",
@@ -31,7 +30,7 @@ const nivelesData = [
   },
   {
     id: 3,
-    titulo: "Euro Teens",
+    titulo: "Titulo",
     edad: "10 - 15 años",
     icono: "🧑‍🎓",
     descripcion: "Dominio y Certificación",
@@ -48,12 +47,11 @@ const NivelesCamino = () => {
   return (
     <section className="camino-section">
       <div className="camino-header">
-        <h2>El Camino a la Fluidez</h2>
+        <h2>{/*El Camino a la Fluidez*/}Programas por Edades</h2>
         <p>Acompañamos a tu hijo en cada etapa de su aprendizaje</p>
       </div>
 
       <div className="camino-container">
-        {/* Este div dibuja la línea conectora detrás */}
         <div className="linea-conector-fondo"></div>
 
         {nivelesData.map((nivel, index) => (
@@ -67,7 +65,6 @@ const NivelesCamino = () => {
               transition={{ delay: index * 0.2, type: "spring", stiffness: 60 }}
               whileHover={{ y: -10, borderColor: nivel.color }}
             >
-              {/* El Icono Flotante */}
               <div className="camino-icon-circle" style={{ backgroundColor: nivel.color }}>
                 {nivel.icono}
               </div>
@@ -76,7 +73,6 @@ const NivelesCamino = () => {
               <span className="camino-edad">{nivel.edad}</span>
               <p className="camino-desc">{nivel.descripcion}</p>
               
-              {/* AQUI LA FUSIÓN: La Checklist con palomitas */}
               <ul className="card-checklist">
                 {nivel.features.map((feature, i) => (
                   <li key={i}>
@@ -87,7 +83,6 @@ const NivelesCamino = () => {
 
             </motion.div>
 
-            {/* Flecha conectora (Solo en Desktop y si no es el último) */}
             {index < nivelesData.length - 1 && (
               <div className="flecha-conector">➜</div>
             )}

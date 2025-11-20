@@ -1,20 +1,45 @@
 /*Barra de navegación*/
-.Nav{
+.Nav {
   background-color: blueviolet;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.nav-position{
   position: absolute;
   width: 100%;
 }
 
-.cont-nav{
+.navbar .container{
   margin: 0;
+  padding: 0;
 }
 
-.color-texto .nav-link{
-  color: white;
+.nav-link-custom {
+  position: relative;
+  padding-bottom: 5px;
 }
 
-.navbar-nav .nav-link.show{
-  color: white;
+.link-content {
+  display: inline-block;
+  position: relative;
+}
+
+.underline {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 3px;
+  background-color: #FFD700;
+  border-radius: 2px;
+  display: block;
+}
+
+.color-texto .nav-link {
+  color: white !important;
+  font-weight: 500;
 }
 
 /*Presentacion*/
@@ -222,8 +247,12 @@
 /*Carrusel*/
 
 .carrusel-section{
-  background-color: #9370DB;
+  background-color: blueviolet;
   padding-bottom: 3rem;
+}
+
+.carrusel-section h2{
+  color: white;
 }
 
 .carrusel-cont{
@@ -233,8 +262,109 @@
 
 .card-d{
   width: 25%;
-  background-color: #98FF98;
+  /* background-color: #98FF98; */
 }
+
+
+/* Prueba de carrusel */
+.testimonios-section {
+  /* Mantenemos tu color morado base, asegúrate que sea el mismo de tu Navbar */
+  background-color: blueviolet; 
+  padding: 4rem 0;
+  text-align: center;
+  overflow: hidden; /* Importante para que no aparezca scroll horizontal */
+}
+
+.testimonios-header h2 {
+  color: white; /* CAMBIO IMPORTANTE: Texto blanco para contraste */
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonios-header p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 3rem;
+}
+
+/* El contenedor principal de la animación */
+/* Testimonios.css */
+/* Mantenemos el contenedor y el track */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  padding: 2rem 0; /* Un poco de aire para la sombra de las cards */
+}
+
+/* --- DISEÑO DE LA TARJETA --- */
+.testimonio-card {
+  background: white;
+  width: 350px; /* Ancho fijo para uniformidad */
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  flex-shrink: 0; /* Evita que se aplasten */
+}
+
+.testimonio-comillas {
+  font-size: 4rem;
+  color: #FFD700; /* Amarillo oro de tu marca */
+  line-height: 1rem;
+  font-family: serif;
+  margin-bottom: 1rem;
+}
+
+.testimonio-texto {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.testimonio-autor {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.autor-avatar {
+  width: 45px;
+  height: 45px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.autor-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.autor-info span {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+
 
 /*Card Promociones*/
 

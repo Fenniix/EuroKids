@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const nivelesData = [
   {
     id: 1,
-    titulo: "Baby Euro",
+    titulo: "Titulo",
     edad: "3 - 5 años",
     descripcion: "Despertamos su curiosidad natural.",
     color: "#FFD166", // Amarillo cálido
@@ -17,7 +17,7 @@ const nivelesData = [
   },
   {
     id: 2,
-    titulo: "Euro Kids",
+    titulo: "Titulo",
     edad: "6 - 9 años",
     descripcion: "Construimos bases sólidas.",
     color: "#06D6A0", // Verde menta
@@ -30,7 +30,7 @@ const nivelesData = [
   },
   {
     id: 3,
-    titulo: "Euro Teens",
+    titulo: "Titulo",
     edad: "10 - 15 años",
     descripcion: "Dominio y certificación.",
     color: "#118AB2", // Azul serio
@@ -47,8 +47,8 @@ const Niveles = () => {
   return (
     <section className="niveles-section">
       <div className="niveles-header">
-        <h2>Programas por Edades</h2>
-        <p>Un espacio diseñado para cada etapa de su crecimiento</p>
+        <h2>Titulo</h2>
+        <p>Descripción</p>
       </div>
 
       <div className="niveles-grid">
@@ -56,12 +56,11 @@ const Niveles = () => {
           <motion.div 
             key={nivel.id}
             className="nivel-card"
-            // Animación de entrada escalonada (stagger)
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }} // Se anima solo la primera vez que lo ves
+            viewport={{ once: true }}
             transition={{ delay: index * 0.2, duration: 0.5 }}
-            whileHover={{ y: -10 }} // Pequeño levantamiento al pasar el mouse
+            whileHover={{ y: -10 }}
           >
             {/* Cabecera de color */}
             <div className="nivel-top" style={{ backgroundColor: nivel.color }}>

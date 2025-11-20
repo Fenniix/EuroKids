@@ -4,16 +4,12 @@ import { motion } from 'framer-motion';
 const ClaseMuestra = () => {
   return (
     <section className="cta-section">
-      
-      {/* 1. El Separador de Ola (SVG) */}
-      {/* "fill" debe ser del mismo color que la sección ANTERIOR (blanco) */}
       <div className="custom-shape-divider-top">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
         </svg>
       </div>
 
-      {/* 2. El Contenido */}
       <div className="cta-content">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -31,29 +27,34 @@ const ClaseMuestra = () => {
           No dejes que se lo cuenten. Agenda hoy una <strong>clase muestra sin costo</strong> y descubre por qué los niños aman aprender en EuroKids.
         </motion.p>
 
-        {/* 3. El Botón con "Latido" */}
         <motion.button 
           className="cta-btn"
           animate={{ 
-            scale: [1, 1.05, 1], // Crece un 5% y regresa
+            scale: [1, 1.05, 1],
             boxShadow: [
               "0px 0px 0px rgba(255,255,255,0.7)",
-              "0px 0px 20px rgba(255,255,255,0)", // Efecto de onda expandiéndose
+              "0px 0px 20px rgba(255,255,255,0)",
               "0px 0px 0px rgba(255,255,255,0)"
             ]
           }}
           transition={{ 
             duration: 2, 
-            repeat: Infinity, // Se repite por siempre
+            repeat: Infinity,
             ease: "easeInOut" 
           }}
-          whileHover={{ scale: 1.1 }} // Al pasar el mouse crece más
+          whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
           ¡Quiero mi clase GRATIS!
         </motion.button>
         
         <p className="cta-disclaimer">*Cupos limitados por grupo para garantizar la atención personalizada.</p>
+      </div>
+
+      <div class="custom-shape-divider-bottom">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+        </svg>
       </div>
     </section>
   );

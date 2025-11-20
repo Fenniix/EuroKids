@@ -12,3 +12,7 @@ export { default as ClaseMuestra } from './elements/ClaseMuestra.jsx';
 /*Layout*/
 export { default as FooterP } from './layout/Footer.jsx';
 export { default as NavbarP } from './layout/Navbar.jsx';
+
+
+// Pruebas
+export { default as Pruebas } from './elements/Pruebas.jsx';

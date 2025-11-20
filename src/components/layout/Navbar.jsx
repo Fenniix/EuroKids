@@ -1,27 +1,54 @@
+import React from 'react';
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { motion } from "framer-motion"; // Importamos Motion
+
+// Componente auxiliar para no repetir código en cada Link
+const LinkAnimado = ({ href, children }) => {
+  return (
+    <Nav.Link href={href} className="mx-3 text-white nav-link-custom">
+      <motion.div
+        className="link-content"
+        initial="rest"
+        whileHover="hover"
+        animate="rest"
+      >
+      {children}
+      <motion.span
+        className="underline"
+        variants={{
+          rest: { width: 0, opacity: 0 },
+          hover: { width: "100%", opacity: 1 }
+        }}
+        transition={{ duration: 0.3 }}
+      />
+      </motion.div>
+    </Nav.Link>
+  );
+};
 
 const NavbarP = () => {
   return (
-    <Navbar  expand="lg" className="Nav">
+    <Navbar expand="lg" className="Nav">
       <Container className="cont-nav">
         <Navbar.Brand href="#home">
-          <img alt="" src="src/assets/img/Euro-centro-lg.png" height="60" className="d-inline-block align-top me-2"/>
+          <motion.img 
+            whileHover={{ scale: 1.1, rotate: -5 }}
+            alt="EuroKids Logo" 
+            src="src/assets/img/Euro-centro-lg.png" 
+            height="60" 
+            className="d-inline-block align-top ms-3 me-2 z-1 position-relative"
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" className='nav-position'>
           <Nav className="mx-auto justify-content-center" style={{ flex: 1 }}>
-            <Nav.Link href="#opcion1" className="mx-3 text-white">
-              Opción 1
-            </Nav.Link>
-            <NavDropdown title="Opción2" id="nav-dropdown" className="mx-3 color-texto">
+            <LinkAnimado href="#opcion1">Opción 1</LinkAnimado>
+            <NavDropdown title={<span className="dropdown-title">Sucursales</span>} id="nav-dropdown" className="mx-3 color-texto">
               <NavDropdown.Item href="/Ekcanoitas">EK Canoitas</NavDropdown.Item>
               <NavDropdown.Item href="/Ekmoctezuma">EK Moctezuma</NavDropdown.Item>
-              {/*<NavDropdown.Divider />*/}
               <NavDropdown.Item href="/Eklaureles">EuroKids Laureles</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#opcion3" className="mx-3 text-white">
-              Opción 3
-            </Nav.Link>
+            <LinkAnimado href="#opcion3">Opción 3</LinkAnimado>
           </Nav>
         </Navbar.Collapse>
       </Container>
