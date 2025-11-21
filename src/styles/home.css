@@ -242,6 +242,25 @@
 .respuesta{
 }
 
+/* Prueba de preguntas frecuentes */
+
+.accordion-sec .accordion-button {
+  background-color: white;
+  font-size: 1.1rem;
+  padding: 1.2rem;
+  box-shadow: none;
+}
+
+.accordion-sec .accordion-button:not(.collapsed) {
+  color: blueviolet;
+}
+
+.accordion-sec .accordion-body {
+  line-height: 1.6;
+  padding: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
 /*Elementos*/
 
 /*Carrusel*/
@@ -268,42 +287,40 @@
 
 /* Prueba de carrusel */
 .testimonios-section {
-  /* Mantenemos tu color morado base, asegúrate que sea el mismo de tu Navbar */
   background-color: blueviolet; 
-  padding: 4rem 0;
   text-align: center;
-  overflow: hidden; /* Importante para que no aparezca scroll horizontal */
+  overflow: hidden;
 }
 
 .testimonios-header h2 {
-  color: white; /* CAMBIO IMPORTANTE: Texto blanco para contraste */
+  color: white;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 .testimonios-header p {
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 3rem;
+  color: white;
+  opacity: calc(0.8);
+  margin: 0;
 }
 
-/* El contenedor principal de la animación */
-/* Testimonios.css */
-/* Mantenemos el contenedor y el track */
+/* Contenedor principal del carrusel marquee */
+
 .marquee-container {
   width: 100%;
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
 
 .marquee-track {
   display: flex;
   gap: 2rem;
   width: max-content;
-  padding: 2rem 0; /* Un poco de aire para la sombra de las cards */
+  padding-block: 2.5rem;
 }
 
-/* --- DISEÑO DE LA TARJETA --- */
+/* Card dentro del carrusel */
 .testimonio-card {
   background: white;
   width: 350px; /* Ancho fijo para uniformidad */

@@ -1,6 +1,6 @@
 import {Container, Card, Nav, Button, Tab, Tabs } from "react-bootstrap"
 import { useEffect, useState } from "react"
-import { FooterP, NavbarP, Carrusel, GaleriaAni, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra, Pruebas } from "../components"
+import { FooterP, NavbarP, Carrusel, GaleriaAni, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra, Pruebas, Backtop } from "../components"
 import "../styles/home.css"
 
 const home = () => {
@@ -52,7 +52,12 @@ const home = () => {
 
   return (
     <>
+      {/* Barra de navegacion */}
       <NavbarP/>
+
+      {/* Backtop */}
+      <Backtop/>
+      
       <div className="font-pre">
         {/* Video de fondo 
         <video autoPlay loop muted playsInline src="" className="videoEK"></video>
@@ -149,8 +154,8 @@ const home = () => {
         <CardP/>
       </div>
       
-      {/* Carrusel de comentarios */}
-      <Carrusel/>
+      {/* Carrusel de comentarios 
+      <Carrusel/>*/}
 
       <Pruebas/>
 

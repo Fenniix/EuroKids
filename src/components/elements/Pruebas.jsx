@@ -49,63 +49,59 @@ const Hero = () => {
   );
 };
 
-const testimoniosData = [
+const testimonios = [
   {
     id: 1,
-    nombre: "Mariana L.",
-    rol: "Mamá de Sofía (6 años)",
-    texto: "Sofía odiaba el inglés en su otra escuela. Desde que entró a EuroKids, llega cantando a la casa. ¡El cambio es increíble!",
+    nombre: "Nombre",
+    rol: "¿Que es?-Mama, papa, estudiante",
+    texto: "Descripción",
     avatar: "👩"
   },
   {
     id: 2,
-    nombre: "Carlos R.",
-    rol: "Papá de Luis (12 años)",
-    texto: "La preparación para la certificación es muy seria. Luis se siente muy seguro para su examen. 100% recomendados.",
+    nombre: "Nombre",
+    rol: "¿Que es?-Mama, papa, estudiante",
+    texto: "Descripción",
     avatar: "👨"
   },
   {
     id: 3,
-    nombre: "Ana G.",
-    rol: "Mamá de Leo (4 años)",
-    texto: "Me encanta la paciencia de las maestras. Leo es muy inquieto y han sabido canalizar su energía para aprender.",
+    nombre: "Nombre",
+    rol: "¿Que es?-Mama, papa, estudiante",
+    texto: "Descripción",
     avatar: "👩‍🦱"
   },
   {
     id: 4,
-    nombre: "Familia Pérez",
-    rol: "Alumnos desde 2023",
-    texto: "Las instalaciones son seguras y bonitas. Nos da mucha tranquilidad dejar a nuestros hijos ahí.",
+    nombre: "Nombre",
+    rol: "¿Que es?-Mama, papa, estudiante o lugar",
+    texto: "Descripción",
     avatar: "🏠"
   },
 ];
 
 const Testimonios = () => {
-  const testimoniosInfinitos = [...testimoniosData, ...testimoniosData];
+  const testimoniosInfinitos = [...testimonios, ...testimonios];
 
   return (
     <section className="testimonios-section">
-      <div className="testimonios-header">
+      <div className="testimonios-header mt-3">
         <h2>Lo que dicen nuestros estudiantes</h2>
         <p>La confianza de los padres es nuestra mejor calificación</p>
       </div>
 
       <div className="marquee-container">
         
-        {/* El motor sigue siendo Motion */}
         <motion.div 
           className="marquee-track"
           animate={{ x: "-50%" }}
           transition={{ duration: 20, ease: "linear", repeat: Infinity }}
         >
           {testimoniosInfinitos.map((item, index) => (
-            
-            /* 2. Aquí usamos el componente de Bootstrap */
-            /* Le agregamos clases utilitarias de Bootstrap para estilos rápidos */
             <Card 
               key={index} 
-              className="border-0 shadow-sm rounded-4" // Sin borde, con sombra suave, bordes redondeados
-              style={{ width: '350px', flexShrink: 0 }} // Importante: Ancho fijo y que no se encoja
+              className="border-0 shadow-sm rounded-4"
+              style={{ width: '350px', flexShrink: 0 }}
             >
               <Card.Body className="p-4 d-flex flex-column justify-content-between">
                 <div>
@@ -139,7 +135,7 @@ const Testimonios = () => {
 const Pruebas = () => {
   return (
     <>
-      {/* <Testimonios /> */}
+      <Testimonios />
     
     </>
   );
