@@ -15,7 +15,6 @@
   margin: 3rem auto;
 }
 
-/* --- CARD PEQUEÑA --- */
 .idioma-card {
   background: white;
   border-radius: 15px;
@@ -26,8 +25,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 200px; /* Altura fija para uniformidad */
-  position: relative; /* Necesario para layoutId a veces */
+  height: 200px;
+  position: relative;
 }
 
 .idioma-img-icono {
@@ -47,15 +46,14 @@
   font-size: 0.8rem;
   color: #999;
   margin-top: 1rem;
-  opacity: 0; /* Oculto normalmente */
+  opacity: 0;
   transition: opacity 0.3s;
 }
 
 .idioma-card:hover .ver-mas {
-  opacity: 1; /* Visible al hover */
+  opacity: 1;
 }
 
-/* --- MODAL --- */
 .modal-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -70,7 +68,7 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
-  pointer-events: none; /* Para poder clickear el overlay si quieres */
+  pointer-events: none;
 }
 
 .idioma-modal {
@@ -163,7 +161,7 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap; /* Para que en móviles se pongan uno bajo otro */
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -172,8 +170,8 @@
   background: white;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  overflow: hidden; /* Para que la cabecera de color respete el borde redondeado */
-  width: 300px; /* Ancho fijo para que parezcan columnas */
+  overflow: hidden;
+  width: 300px;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -201,7 +199,7 @@
 /* Cuerpo de la tarjeta */
 .nivel-body {
   padding: 2rem;
-  flex: 1; /* Hace que ocupen todo el alto disponible */
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -226,7 +224,6 @@
   font-style: italic;
 }
 
-/* La Checklist */
 .nivel-lista {
   list-style: none;
   padding: 0;
@@ -250,9 +247,9 @@
 
 /* Botón al final */
 .nivel-btn {
-  margin-top: auto; /* Empuja el botón al final de la tarjeta */
+  margin-top: auto;
   background: transparent;
-  border: 2px solid #333; /* Se sobreescribe en el estilo en línea */
+  border: 2px solid #333;
   padding: 0.8rem 2rem;
   border-radius: 8px;
   font-weight: bold;
@@ -265,7 +262,6 @@
   transform: scale(1.05);
 }
 
-/* Responsivo para móviles */
 @media (max-width: 768px) {
   .niveles-grid {
     flex-direction: column;
@@ -301,9 +297,9 @@
 .camino-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Alineado arriba para que si una lista es larga no deforme todo */
+  align-items: flex-start;
   max-width: 1200px;
-  margin: 5rem auto 2rem auto; /* Más margen arriba para los iconos flotantes */
+  margin: 5rem auto 2rem auto;
   gap: 1rem;
   position: relative;
 }
@@ -415,7 +411,7 @@
   
   .camino-card {
     width: 100%;
-    max-width: 320px;
+    min-width: 280px;
     min-height: auto;
   }
 }
@@ -515,7 +511,6 @@
     fill: #000cb8;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .cta-content h2 {
     font-size: 2rem;
@@ -532,7 +527,6 @@
   }
 }
 
-/* Contenedor principal de la galería */
 .galeria-container {
   width: 90%;
   max-width: 1100px;
@@ -552,9 +546,6 @@
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  
-  /* ¡Aquí la primera animación! 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;*/
 }
 
 .galeria-item img {
@@ -563,12 +554,6 @@
   display: block;
   object-fit: cover;
 }
-
-/* La animación HOVER que mencionamos 
-.galeria-item:hover {
-  transform: scale(1.05); 
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}*/
 
 .modal-galeria {
   position: fixed;
@@ -581,9 +566,6 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-
-  /* ¡Animación Fade-in para el fondo!
-  animation: fadeIn 0.3s ease;*/
 }
 
 .modal-contenido {
@@ -598,9 +580,6 @@
   position: relative;
   gap: 2rem;
   overflow: hidden;
-
-  /* Mantenemos la animación de entrada 
-  animation: slideDown 0.4s ease-out;*/
 }
 
 .modal-col-texto {
@@ -652,24 +631,6 @@
 }
 
 
-/* 6. Keyframes para las animaciones 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideDown {
-  from { 
-    opacity: 0;
-    transform: translateY(-30px); 
-  }
-  to { 
-    opacity: 1;
-    transform: translateY(0);
-  }
-}*/
-
-/* ---- Media Query para Móviles ---- */
 @media (max-width: 768px) {
   
   .modal-contenido {
@@ -677,18 +638,18 @@
     max-width: 90%;
     max-height: 95vh;
     padding: 1.5rem;
-    overflow-y: auto; /* Permite scroll si el texto es largo */
+    overflow-y: auto;
     gap: 1.5rem;
   }
 
   .modal-col-texto {
-    order: 2; /* Mueve el texto para abajo */
-    min-width: unset; /* Resetea el ancho mínimo */
+    order: 2;
+    min-width: unset;
   }
 
   .modal-col-imagen {
-    order: 1; /* Mueve la imagen para arriba */
-    flex: 1; /* Resetea el flex */
+    order: 1;
+    flex: 1;
     width: 100%;
   }
 

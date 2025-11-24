@@ -45,9 +45,9 @@ const nivelesData = [
 
 const NivelesCamino = () => {
   return (
-    <section className="camino-section">
+    <section className="camino-section" id="Programas">
       <div className="camino-header">
-        <h2>{/*El Camino a la Fluidez*/}Programas por Edades</h2>
+        <h2>Programas por Edades</h2>
         <p>Acompañamos a tu hijo en cada etapa de su aprendizaje</p>
       </div>
 

@@ -46,7 +46,7 @@ const NavbarP = () => {
             <NavDropdown title={<span className="dropdown-title">Sucursales</span>} id="nav-dropdown" className="mx-3 color-texto">
               <NavDropdown.Item href="/Ekcanoitas">EK Canoitas</NavDropdown.Item>
               <NavDropdown.Item href="/Ekmoctezuma">EK Moctezuma</NavDropdown.Item>
-              <NavDropdown.Item href="/Eklaureles">EuroKids Laureles</NavDropdown.Item>
+              <NavDropdown.Item href="/Eklaureles">EK Laureles</NavDropdown.Item>
             </NavDropdown>
             <LinkAnimado href="#opcion3">Opción 3</LinkAnimado>
           </Nav>

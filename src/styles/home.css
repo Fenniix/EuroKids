@@ -83,58 +83,134 @@
   position: relative;
 }
 
-/*¿Que aprenderan?*/
+/* ¿Como aprenderan? */
 
-.aprendizaje{
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  background-color: blueviolet;
-  text-align: center;
-  color: white;
+.aprendizaje-title {
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 2rem;
 }
 
-.tabs-cont{
-  background-color: blueviolet;
+.tabs-navigation {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  width: fit-content;
+  margin: 0 auto;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
-.tabs-cont .nav-link{
-  color: white;
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 40px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: color 0.3s ease;
 }
 
-.tabs-cont .nav-link.active{
-  color: rgb(241, 237, 0);
+.tab-btn.active {
+  color: #fff;
 }
 
-.card-cont{
-  border-end-start-radius: 1rem;
-  border-end-end-radius: 1rem;
-}
-/* Cambio de altura para no afectar al siguiente componente
-.card-b{
-  height: 35rem;
-}
-*/
-.txt-card{
-  width: 50%;
-}
-
-.img-interactiva{
+.tab-background {
   position: absolute;
-  border-radius: 12rem;
-  width: 350px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: blueviolet;
+  border-radius: 2.5rem;
+  z-index: 1;
+}
+
+.tab-content-wrapper {
+  background: white;
+  border-radius: 1.2rem;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+.text-column h2 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.description-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #444;
+  display: flex;
+  align-items: start;
+  gap: 0.6rem;
+}
+
+.features-list li span {
+  font-size: 1.5rem;
+  line-height: 1rem;
+  font-weight: bold;
+}
+
+.image-container {
+  border-radius: 1.6rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   height: 350px;
+  width: 100%;
 }
 
-.text-list{
-  width: 65%;
+.tab-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.text-list li{
-  margin-bottom: 1rem;
+.btn-ver-planes {
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+  overflow: hidden;
+  border: 3px solid;
 }
 
-.link-apren{
-  width: max-content;
+.btn-ver-planes:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+  .tab-content-wrapper {
+    padding: 2rem 1rem;
+  }
+  
+  .image-container {
+    margin-top: 2rem;
+    height: 250px;
+  }
+  
+  .text-column {
+    text-align: left;
+  }
 }
 
 .contact{
@@ -153,8 +229,6 @@
 
 .luz:hover{
   transform: scale(1.05);
-  background-color: #ecc500;
-  border: 3px solid #fff133;
 }
 
 .luz::after{
@@ -323,7 +397,7 @@
 /* Card dentro del carrusel */
 .testimonio-card {
   background: white;
-  width: 350px; /* Ancho fijo para uniformidad */
+  width: 350px;
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
@@ -331,12 +405,12 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
-  flex-shrink: 0; /* Evita que se aplasten */
+  flex-shrink: 0;
 }
 
 .testimonio-comillas {
   font-size: 4rem;
-  color: #FFD700; /* Amarillo oro de tu marca */
+  color: #FFD700;
   line-height: 1rem;
   font-family: serif;
   margin-bottom: 1rem;
