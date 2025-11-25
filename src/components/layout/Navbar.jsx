@@ -1,8 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
-import { motion } from "framer-motion"; // Importamos Motion
+import { motion } from "framer-motion";
 
-// Componente auxiliar para no repetir código en cada Link
 const LinkAnimado = ({ href, children }) => {
   return (
     <Nav.Link href={href} className="mx-3 text-white nav-link-custom">

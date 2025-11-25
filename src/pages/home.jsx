@@ -1,4 +1,4 @@
-import {Container, Card, Nav, Button, Tab, Tabs } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import { useEffect, useState } from "react"
 import { FooterP, NavbarP, Carrusel, GaleriaAni, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra, Pruebas, Backtop, Aprenderan } from "../components"
 import "../styles/home.css"
@@ -57,17 +57,14 @@ const home = () => {
 
       {/* Backtop */}
       <Backtop/>
-      
+
       <div className="font-pre">
-        {/* Video de fondo 
-        <video autoPlay loop muted playsInline src="" className="videoEK"></video>
-        */}
         <Container className="cont-p cont-animado">
           <h1 className="display-1 fw-bold">EUROKIDS</h1>
           {/*<p className="lead">¡Explora, aprende y diviértete!</p>*/}
         </Container>
       </div>
-      
+
       {/* Idiomas */}
       <Idiomas/>
 
@@ -81,37 +78,13 @@ const home = () => {
         <h1 className="mt-4">Razones para elegir EuroKids</h1>
         <CardP/>
       </div>
-      
-      {/* Carrusel de comentarios 
+
+      {/* Carrusel de comentarios
       <Carrusel/>*/}
 
       <Pruebas/>
 
       {/* Seccion - ¿Como enseñamos? */}
-      {/*
-      <div className="metodos mt-4">
-        <h1 className="backg-h1">¿Como enseñamos?</h1>
-        <div className="cont-met d-flex">
-          <div className="op-met">
-            <h4 onMouseEnter={() => setActiveTab('opcion1')} style={{ background: activeTab === "opcion1" ? "white" : "transparent", filter: activeTab === "opcion1" ? "brightness(0.8)" : "brightness(0)"}} className="op-h4">Seguridad en el aula</h4>
-            <h4 onMouseEnter={() => setActiveTab('opcion2')} style={{ background: activeTab === "opcion2" ? "white" : "transparent", filter: activeTab === "opcion2" ? "brightness(0.8)" : "brightness(0)"}} className="op-h4">Como enseñamos</h4>
-            <h4 onMouseEnter={() => setActiveTab('opcion3')} style={{ background: activeTab === "opcion3" ? "white" : "transparent", filter: activeTab === "opcion3" ? "brightness(0.8)" : "brightness(0)"}} className="op-h4">Docentes</h4>
-          </div>
-          <div className="desc-met">
-            {activeTab === "opcion1" &&(
-              <Cards/>
-            )}
-            {activeTab === "opcion2" &&(
-              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto culpa consequuntur incidunt iure unde fugit at perspiciatis ullam suscipit voluptate veritatis beatae eveniet enim, recusandae exercitationem, atque omnis, fugiat rerum?</div>
-            )}
-            {activeTab === "opcion3" &&(
-              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestias nesciunt minima ipsum earum beatae reiciendis maxime, quaerat iste laboriosam quasi sit nulla nostrum sed? Assumenda facilis saepe sunt velit.</div>
-            )}
-          </div>
-        </div>
-      </div>
-      */}
-
       <GaleriaAni/>
 
       {/* Seccion pendiente de contenido y nombre */}
@@ -122,7 +95,7 @@ const home = () => {
 
       {/* Clase Muestra */}
       <ClaseMuestra/>
-      
+
       <FooterP/>
     </>
   )

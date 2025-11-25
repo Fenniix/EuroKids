@@ -48,8 +48,8 @@ const CardP = () => {
     <>
       <div className="mt-5">
         <div className="txt-cardP-left animate-p-right">
-          <h1>Titulo</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis suscipit cupiditate nam consequatur ea quidem nihil libero dignissimos laboriosam ex, temporibus eligendi aperiam saepe consectetur voluptatibus quisquam doloremque. Sapiente, quis.</p>
+          <h1>Aprendizaje Lúdico</h1>
+          <p>Olvídate de las clases aburridas. Aquí tus hijos aprenden jugando, cantando y creando, haciendo que el idioma se vuelva parte natural de su vida.</p>
         </div>
         <div className="d-flex justify-content-end overflow-hidden">
           <Card className="card-pd animate-p-left">
@@ -61,8 +61,8 @@ const CardP = () => {
       <div className="mt-5">
         <div className="posicion-p d-flex justify-content-end">
           <div className="txt-cardP-right animate-p-left">
-            <h1>Titulo</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem dolores cum numquam facere vitae adipisci eligendi qui quos ipsa optio amet modi molestias magni, dolore fugit doloremque perferendis nulla aspernatur?</p>
+            <h1>Certificaciones Oficiales</h1>
+            <p>No solo aprenden, lo demuestran. Preparamos a tus hijos para obtener certificaciones internacionales (Cambridge, DELF) desde temprana edad.</p>
           </div>
         </div>
         <div className="d-flex justify-content-start">
@@ -75,8 +75,8 @@ const CardP = () => {
       
       <div className="mt-5 mb-5">
         <div className="txt-cardP-left animate-p-right">
-          <h1>Titulo</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae quidem cupiditate ipsa voluptatibus repellendus impedit consequuntur, blanditiis beatae facilis inventore quasi quam perferendis, nostrum similique! Nulla velit tenetur illo aspernatur.</p>
+          <h1>Espacios Seguros</h1>
+          <p>Instalaciones diseñadas pensando 100% en niños, con protocolos de seguridad estrictos para que tú tengas total tranquilidad mientras ellos aprenden.</p>
         </div>
         <div className="d-flex justify-content-end overflow-hidden">
           <Card className="card-pd animate-p-left">
