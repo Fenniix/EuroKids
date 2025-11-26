@@ -1,26 +1,25 @@
-/* --- HERO SUCURSAL --- */
-.sucursal-hero {
-  /* Imagen de fondo genérica o específica */
-  background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-  height: 60vh; /* Ocupa el 60% de la altura de la pantalla */
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Seccion de presentacion */
+
+/* .letra{
+  overflow: hidden;
 }
 
-.hero-overlay {
-  background: rgba(67, 97, 238, 0.7); /* Capa morada/azul encima de la foto */
+.letra::after{
+  content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  left: -100%;
+  width: 100px;
+  height: 100%;
+  top: 0;
+  background-image: linear-gradient(120deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 70%);
+  animation: ligth 5.3s ease-out infinite;
+  z-index: 1;
+} */
+
+.ventajas {
+  height: 25rem;
 }
 
-/* --- SECCIÓN INFO --- */
 .sucursal-info-section {
   padding: 5rem 0;
   background-color: #fff;
@@ -33,16 +32,39 @@
   gap: 1.5rem;
 }
 
-.icon-box {
-  background-color: #f0f0f0;
-  color: blueviolet; /* Tu color de marca */
+.box-location {
+  background-color: #ff002b;
+  border: #ff6982 4px solid;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.box-call {
+  background-color: #1100ff;
+  border: #685dff 4px solid;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.box-clock {
+  background-color: #ffa600;
+  border: #ffc456 4px solid;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
@@ -52,7 +74,23 @@
   color: #333;
 }
 
-/* --- MAPA --- */
+.btn-message {
+  background-color: #002fff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  border: 4px solid #4361ee;
+}
+
+.btn-message:hover {
+  transform: translateY(-3px);
+  border: 4px solid #4361ee;
+  background-color: #002fff;
+}
+
 .map-container {
   border-radius: 20px;
   overflow: hidden;

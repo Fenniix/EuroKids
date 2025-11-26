@@ -29,7 +29,7 @@ const NavbarP = () => {
   return (
     <Navbar expand="lg" className="Nav">
       <Container className="cont-nav">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <motion.img 
             whileHover={{ scale: 1.1, rotate: -5 }}
             alt="EuroKids Logo" 
@@ -46,6 +46,7 @@ const NavbarP = () => {
               <NavDropdown.Item href="/Ekcanoitas">EK Canoitas</NavDropdown.Item>
               <NavDropdown.Item href="/Ekmoctezuma">EK Moctezuma</NavDropdown.Item>
               <NavDropdown.Item href="/Eklaureles">EK Laureles</NavDropdown.Item>
+              <NavDropdown.Item href="/">Inicio</NavDropdown.Item>
             </NavDropdown>
             <LinkAnimado href="#opcion3">Opción 3</LinkAnimado>
           </Nav>

@@ -10,6 +10,7 @@ export { default as NivelesCamino } from './elements/NivelesCamino.jsx';
 export { default as ClaseMuestra } from './elements/ClaseMuestra.jsx';
 export { default as Backtop } from './elements/BackTop.jsx';
 export { default as Aprenderan } from './elements/Aprenderan.jsx';
+export { default as Ventajas } from './elements/Ventajas.jsx';
 
 /*Layout*/
 export { default as FooterP } from './layout/Footer.jsx';

@@ -157,9 +157,9 @@ const GaleriaA2 = () => {
 const GaleriaAni = () => {
   return(
     <>
-      {/*
+      
      <GaleriaA2/>
-      */}
+     
     </>
   )
 }

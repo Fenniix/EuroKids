@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap"
 import { useEffect, useState } from "react"
-import { FooterP, NavbarP, Carrusel, GaleriaAni, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra, Pruebas, Backtop, Aprenderan } from "../components"
+import { FooterP, NavbarP, GaleriaAni, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra, Pruebas, Backtop, Aprenderan } from "../components"
 import "../styles/home.css"
 
 const home = () => {
@@ -83,9 +83,6 @@ const home = () => {
       <Carrusel/>*/}
 
       <Pruebas/>
-
-      {/* Seccion - ¿Como enseñamos? */}
-      <GaleriaAni/>
 
       {/* Seccion pendiente de contenido y nombre */}
       <Niveles/>
