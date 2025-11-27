@@ -16,6 +16,60 @@
   z-index: 1;
 } */
 
+.box-prueba {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* boton de envio formulario */
+.mientras {
+  width: 100%;
+}
+
+.btn-enviar {
+  width: 60%;
+  height: 20%;
+  background-color: #ecc500;
+  border: 3px solid #fff133;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+  border-radius: 2rem;
+}
+
+.btn-enviar:hover {
+  background-color: #ecc500;
+  border: 3px solid #fff133;
+}
+
+/* Formulario */
+
+.form-box {
+  height: 30rem;
+  width: 20rem;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.form-opt {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px 10px 20px;
+}
+
+.form-input {
+  border-radius: 1rem;
+  padding: 6px;
+  border: 1px solid #333;
+}
+
+
+.card-ventajas {
+  height: 18rem;
+}
+
 .ventajas {
   height: 25rem;
 }
@@ -80,7 +134,7 @@
   border-radius: 30px;
   font-weight: bold;
   font-size: 1.1rem;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-in;
   overflow: hidden;
   border: 4px solid #4361ee;
 }
@@ -94,5 +148,55 @@
 .map-container {
   border-radius: 20px;
   overflow: hidden;
-  border: 5px solid #fff; /* Marco blanco */
+  border: 5px solid #fff;
+}
+
+/* PRUEBA DE FORMULARIO CON PRESENTACION */
+.hero-form-section {
+  position: relative;
+  /* Fondo: Imagen de niños felices o un degradado corporativo */
+  /* background: linear-gradient(135deg, #6a3093 0%, #a044ff 100%);  */
+  /* Si usas imagen, descomenta esto:
+  background-image: url('../assets/img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center; 
+  */
+  min-height: 100vh; /* Ocupa casi toda la pantalla */
+  display: flex;
+  align-items: center;
+  padding-top: 80px; /* Espacio para el Navbar fijo si lo tienes */
+}
+
+/* Capa oscura si usas imagen de fondo para que el texto se lea */
+.hero-bg-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Oscurece el fondo 40% */
+  /* Si usas degradado sólido, puedes quitar este bloque */
+  display: none; /* Quítalo si usas el degradado CSS de arriba */
+}
+
+/* La tarjeta del formulario */
+.form-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  border-top: 5px solid #FFD700; /* Borde amarillo arriba como detalle */
+}
+
+/* Ajustes de los inputs de Bootstrap para que se vean más limpios */
+.form-floating > .form-control:focus,
+.form-floating > .form-select:focus {
+  border-color: blueviolet;
+  box-shadow: 0 0 0 0.25rem rgba(138, 43, 226, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-form-section {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    height: auto;
+    min-height: auto;
+  }
 }

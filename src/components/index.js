@@ -11,6 +11,8 @@ export { default as ClaseMuestra } from './elements/ClaseMuestra.jsx';
 export { default as Backtop } from './elements/BackTop.jsx';
 export { default as Aprenderan } from './elements/Aprenderan.jsx';
 export { default as Ventajas } from './elements/Ventajas.jsx';
+export { default as VisitanosEKC } from './elements/VisitanosEKC.jsx';
+export { default as Pruebaform } from './elements/Form-info.jsx';
 
 /*Layout*/
 export { default as FooterP } from './layout/Footer.jsx';

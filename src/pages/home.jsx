@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap"
 import { useEffect, useState } from "react"
-import { FooterP, NavbarP, GaleriaAni, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra, Pruebas, Backtop, Aprenderan } from "../components"
+import { FooterP, NavbarP, GaleriaAni, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra, Pruebas, Backtop, Aprenderan, Carrusel } from "../components"
 import "../styles/home.css"
 
 const home = () => {
@@ -58,6 +58,7 @@ const home = () => {
       {/* Backtop */}
       <Backtop/>
 
+      {/* Presentación */}
       <div className="font-pre">
         <Container className="cont-p cont-animado">
           <h1 className="display-1 fw-bold">EUROKIDS</h1>
@@ -74,15 +75,14 @@ const home = () => {
       {/* Niveles de programas */}
       <NivelesCamino/>
 
+      {/* Razones */}
       <div className="promociones">
         <h1 className="mt-4">Razones para elegir EuroKids</h1>
         <CardP/>
       </div>
 
-      {/* Carrusel de comentarios
-      <Carrusel/>*/}
-
-      <Pruebas/>
+      {/* Carrusel de comentarios */}
+      <Carrusel/>
 
       {/* Seccion pendiente de contenido y nombre */}
       <Niveles/>
