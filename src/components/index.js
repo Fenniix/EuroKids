@@ -13,6 +13,7 @@ export { default as Aprenderan } from './elements/Aprenderan.jsx';
 export { default as Ventajas } from './elements/Ventajas.jsx';
 export { default as VisitanosEKC } from './elements/VisitanosEKC.jsx';
 export { default as Pruebaform } from './elements/Form-info.jsx';
+export { default as BienvenidaEKC } from './elements/BienvenidaEKC.jsx';
 
 /*Layout*/
 export { default as FooterP } from './layout/Footer.jsx';

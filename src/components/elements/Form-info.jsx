@@ -8,51 +8,39 @@ const HeroForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("¡Gracias! En un momento te contactamos.");
-    // Aquí conectarías después con tu backend o servicio de correos
   };
 
   return (
-    <div className="hero-form-section">
-      {/* Fondo decorativo (puede ser imagen o color) */}
-      <div className="hero-bg-overlay"></div>
-
+    <div className="form-present" id='formulario'>
       <Container className="position-relative z-2">
         <Row className="align-items-center py-5">
-          
-          {/* --- COLUMNA 1: TEXTO (Izquierda) --- */}
-          {/* order-2 order-lg-1: En móvil baja, en PC va primero */}
-          <Col lg={7} className="text-white mb-5 mb-lg-0 order-2 order-lg-1">
+          <Col lg={7} className="text-black mb-5 mb-lg-0">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="display-3 fw-bold mb-3">
-                El futuro de tus hijos <br />
-                <span className="text-warning">empieza hoy.</span>
+              <h1 className="display-4 fw-bold mb-3 posicion-text">
+                {/* El futuro de tus hijos*/}EuroKids
+                <span className="text-warning display-1 fw-bold">Canoitas {/*empieza hoy.*/}</span>
               </h1>
-              <p className="lead mb-4" style={{ fontSize: '1.25rem', opacity: 0.9 }}>
-                Inglés, Francés y Alemán con el método más divertido y efectivo de Chiapas. 
-                Agenda una clase muestra gratis y compruébalo.
+              <p className="lead mb-4" >
+                {/* Inglés, Francés y Alemán con el método más divertido y efectivo de Chiapas. 
+                Agenda una clase muestra gratis y compruébalo. */}
               </p>
               
-              {/* Pequeña prueba social o iconos */}
               <div className="d-flex gap-4">
-                <div className="d-flex align-items-center gap-2">
-                  <span style={{ fontSize: '1.5rem' }}>🎓</span>
-                  <span>Certificaciones</span>
+                <div className="d-flex align-items-center">
+                  {/* <p>por probar</p> */}
                 </div>
-                <div className="d-flex align-items-center gap-2">
-                  <span style={{ fontSize: '1.5rem' }}>🏫</span>
-                  <span>Instalaciones Seguras</span>
+                <div className="d-flex align-items-center">
+                  {/* <p>tambien</p> */}
                 </div>
               </div>
             </motion.div>
           </Col>
 
-          {/* --- COLUMNA 2: FORMULARIO (Derecha) --- */}
-          {/* order-1 order-lg-2: En móvil va primero (opcional) o segundo */}
-          <Col lg={5} className="order-1 order-lg-2">
+          <Col lg={5} className="">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -60,41 +48,36 @@ const HeroForm = () => {
             >
               <div className="form-card shadow-lg">
                 <div className="text-center mb-4">
-                  <h3 className="fw-bold text-dark">¡Solicita Informes!</h3>
-                  <p className="text-muted small">Déjanos tus datos y te contactamos vía WhatsApp</p>
+                  <h3 className="fw-bold text-dark">¡Solicita Información!</h3>
+                  {/* <p className="text-muted small">Déjanos tus datos y te contactamos vía WhatsApp</p> */}
                 </div>
 
                 <Form onSubmit={handleSubmit}>
-                  {/* Nombre */}
                   <FloatingLabel controlId="floatingName" label="Nombre Completo" className="mb-3">
                     <Form.Control type="text" placeholder="Nombre" required />
                   </FloatingLabel>
 
-                  {/* Teléfono (El más importante) */}
-                  <FloatingLabel controlId="floatingPhone" label="Teléfono / WhatsApp" className="mb-3">
+                  <FloatingLabel controlId="floatingPhone" label="Teléfono" className="mb-3">
                     <Form.Control type="tel" placeholder="Teléfono" required />
                   </FloatingLabel>
 
-                  {/* Interés */}
                   <FloatingLabel controlId="floatingSelect" label="Me interesa:" className="mb-3">
                     <Form.Select aria-label="Selecciona idioma">
-                      <option value="ingles">Inglés para Niños</option>
+                      <option value="ingles">Inglés</option>
                       <option value="frances">Francés</option>
                       <option value="aleman">Alemán</option>
-                      <option value="costos">Saber Costos</option>
+                      <option value="italiano">Italiano</option>
                     </Form.Select>
                   </FloatingLabel>
 
-                  {/* Botón Submit */}
-                  <div className="d-grid">
+                  <div className="btn-form-cont">
                     <motion.button
-                      whileHover={{ scale: 1.02 }}
+                      whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.98 }}
-                      className="btn btn-primary btn-lg fw-bold"
+                      className="btn-form luz"
                       type="submit"
-                      style={{ backgroundColor: 'blueviolet', border: 'none' }}
                     >
-                      QUIERO INFORMACIÓN
+                      Enviar información
                     </motion.button>
                   </div>
                 </Form>

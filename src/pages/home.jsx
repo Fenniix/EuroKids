@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap"
 import { useEffect, useState } from "react"
-import { FooterP, NavbarP, GaleriaAni, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra, Pruebas, Backtop, Aprenderan, Carrusel } from "../components"
+import { FooterP, NavbarP, GaleriaAni, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra, Pruebas, Backtop, Aprenderan, Carrusel, Pruebaform } from "../components"
 import "../styles/home.css"
 
 const home = () => {
@@ -62,7 +62,7 @@ const home = () => {
       <div className="font-pre">
         <Container className="cont-p cont-animado">
           <h1 className="display-1 fw-bold">EUROKIDS</h1>
-          {/*<p className="lead">¡Explora, aprende y diviértete!</p>*/}
+          {/* <p className="lead">¡Explora, aprende y diviértete!</p> */}
         </Container>
       </div>
 

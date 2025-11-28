@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { NavbarP, FooterP, ClaseMuestra, Backtop, GaleriaAni, Ventajas, VisitanosEKC, Pruebaform } from "../components";
+import { NavbarP, FooterP, ClaseMuestra, Backtop, GaleriaAni, Ventajas, VisitanosEKC, Pruebaform, BienvenidaEKC } from "../components";
 import "../styles/sucursales.css";
 
 const EkCanoitas = () => {
@@ -46,7 +46,8 @@ const EkCanoitas = () => {
         </Container>
       </div> */}
 
-      {/* Sección de información principal - sin nombre */}
+      {/* Bienvenida */}
+      <BienvenidaEKC/>
 
       {/* Ventajas */}
       <Ventajas/>
