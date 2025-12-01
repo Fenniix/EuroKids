@@ -1,54 +1,9 @@
 import { Container } from "react-bootstrap"
 import { useEffect, useState } from "react"
-import { FooterP, NavbarP, GaleriaAni, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra, Pruebas, Backtop, Aprenderan, Carrusel, Pruebaform } from "../components"
+import { FooterP, NavbarP, GaleriaAni, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra, Pruebas, Backtop, Aprenderan, Carrusel, PresentForm } from "../components"
 import "../styles/home.css"
 
 const home = () => {
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible-1");
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    const botones = document.querySelectorAll(".cont-animado");
-    botones.forEach((btn) => observer.observe(btn));
-
-    return () => {
-      botones.forEach((btn) => observer.unobserve(btn));
-    };
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible-2");
-          }else {
-            entry.target.classList.remove("visible-2")
-          }
-        });
-      },
-      { threshold: 0.2 } // se activa cuando el 20% es visible
-    );
-
-    const botones = document.querySelectorAll(".cont-animado2");
-    botones.forEach((btn) => observer.observe(btn));
-
-    return () => {
-      botones.forEach((btn) => observer.unobserve(btn));
-    };
-  }, []);
-
-  /*Prueba */
-  const [activeTab, setActiveTab] = useState('opcion1');
 
   return (
     <>
@@ -59,12 +14,9 @@ const home = () => {
       <Backtop/>
 
       {/* Presentación */}
-      <div className="font-pre">
-        <Container className="cont-p cont-animado">
-          <h1 className="display-1 fw-bold">EUROKIDS</h1>
-          {/* <p className="lead">¡Explora, aprende y diviértete!</p> */}
-        </Container>
-      </div>
+      <PresentForm
+      titulo={"EuroKids"}
+      />
 
       {/* Idiomas */}
       <Idiomas/>
@@ -76,10 +28,7 @@ const home = () => {
       <NivelesCamino/>
 
       {/* Razones */}
-      <div className="promociones">
-        <h1 className="mt-4">Razones para elegir EuroKids</h1>
-        <CardP/>
-      </div>
+      <CardP/>
 
       {/* Carrusel de comentarios */}
       <Carrusel/>
@@ -93,6 +42,7 @@ const home = () => {
       {/* Clase Muestra */}
       <ClaseMuestra/>
 
+      {/* Footer */}
       <FooterP/>
     </>
   )

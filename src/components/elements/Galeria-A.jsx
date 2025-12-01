@@ -94,7 +94,6 @@ const GaleriaA2 = () => {
 
   return(
     <>
-
       <div className="galeria-container">
         <h2>Nuestra Galería</h2>
 
@@ -157,9 +156,7 @@ const GaleriaA2 = () => {
 const GaleriaAni = () => {
   return(
     <>
-      
      <GaleriaA2/>
-     
     </>
   )
 }

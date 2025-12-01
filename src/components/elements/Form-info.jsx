@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container, Row, Col, Form, Button, FloatingLabel } from 'react-bootstrap';
+import { Container, Row, Col, Form, FloatingLabel } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
-
-const HeroForm = () => {
+// 1. Aquí recibimos las "instrucciones" (props) de qué texto poner
+const PresentForm = ({ titulo, destacado }) => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,20 +21,21 @@ const HeroForm = () => {
               transition={{ duration: 0.8 }}
             >
               <h1 className="display-4 fw-bold mb-3 posicion-text">
-                {/* El futuro de tus hijos*/}EuroKids
-                <span className="text-warning display-1 fw-bold">Canoitas {/*empieza hoy.*/}</span>
+                {/* 2. Aquí usamos la variable 'titulo' (Ej: EuroKids) */}
+                {titulo} 
+                
+                {/* 3. Aquí usamos la variable 'destacado' (Ej: Canoitas) */}
+                {/* Si no mandas nada en 'destacado', el span no mostrará nada */}
+                <span className="text-warning display-1 fw-bold"> {destacado}</span>
               </h1>
-              <p className="lead mb-4" >
-                {/* Inglés, Francés y Alemán con el método más divertido y efectivo de Chiapas. 
-                Agenda una clase muestra gratis y compruébalo. */}
+              
+              <p className="lead mb-4">
+                 {/* Aquí dejé el espacio por si luego quieres activar la descripción */}
               </p>
               
               <div className="d-flex gap-4">
                 <div className="d-flex align-items-center">
-                  {/* <p>por probar</p> */}
-                </div>
-                <div className="d-flex align-items-center">
-                  {/* <p>tambien</p> */}
+                  {/* Espacio para iconos futuros */}
                 </div>
               </div>
             </motion.div>
@@ -49,7 +50,6 @@ const HeroForm = () => {
               <div className="form-card shadow-lg">
                 <div className="text-center mb-4">
                   <h3 className="fw-bold text-dark">¡Solicita Información!</h3>
-                  {/* <p className="text-muted small">Déjanos tus datos y te contactamos vía WhatsApp</p> */}
                 </div>
 
                 <Form onSubmit={handleSubmit}>
@@ -62,7 +62,8 @@ const HeroForm = () => {
                   </FloatingLabel>
 
                   <FloatingLabel controlId="floatingSelect" label="Me interesa:" className="mb-3">
-                    <Form.Select aria-label="Selecciona idioma">
+                    <Form.Select aria-label="Selecciona idioma" defaultValue={"selecciona"}>
+                      <option value="selecciona" disabled>--Selecciona un idioma--</option>
                       <option value="ingles">Inglés</option>
                       <option value="frances">Francés</option>
                       <option value="aleman">Alemán</option>
@@ -91,55 +92,4 @@ const HeroForm = () => {
   );
 };
 
-const Buttonform = () => {
-  return(
-    <>
-      <div className="mientras d-flex justify-content-center align-items-center">
-        <Button className="btn-enviar luz">
-            Enviar
-        </Button>
-      </div>
-    
-    </>
-  )
-}
-
-const FormInfo = () => {
-  return(
-    <>
-      <div className="form-box mt-5">
-        <h3 className="text-center p-3 m-0">Solita información</h3>
-        <form action="">
-            <div className="form-opt pt-0">
-              <label htmlFor="">Nombre</label>
-              <input type="text" className="form-input"/>
-            </div>
-
-            <div className="form-opt">
-              <label htmlFor="">Apellido</label>
-              <input type="text" className="form-input"/>
-            </div>
-
-            <div className="form-opt">
-              <label htmlFor="">Numero telefonico</label>
-              <input type="number" className="form-input"/>
-            </div>
-            <Buttonform/>
-        </form>
-      </div>
-      
-    </>
-  )
-}
-
-const Pruebaform = () => {
-  return(
-    <>
-      {/* <Buttonform/> */}
-      {/* <FormInfo/> */}
-      <HeroForm/>
-    </>
-  )
-}
-
-export default Pruebaform;
+export default PresentForm;

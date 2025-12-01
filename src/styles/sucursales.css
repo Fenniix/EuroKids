@@ -16,13 +16,6 @@
   z-index: 1;
 } */
 
-.box-prueba {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* boton de envio formulario */
 .mientras {
   width: 100%;
@@ -156,7 +149,7 @@
   position: relative;
   
   /* En caso de usar una imagen de fondo
-  background-image: url('../assets/img/hero-bg.jpg');
+  background-image: url();
   background-size: cover;
   background-position: center; 
   */
@@ -222,30 +215,31 @@
   letter-spacing: 2px;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #FFD700; /* Amarillo */
+  color: #ffd700;
   margin-bottom: 1rem;
   display: block;
 }
 
 .collage-container {
   position: relative;
-  height: 500px; /* Altura del área de fotos */
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Foto Grande */
+/* imagen grande */
 .img-main {
   width: 80%;
   height: 90%;
   object-fit: cover;
   border-radius: 20px;
+  /* border: 5px solid #fff; */
   z-index: 2;
   position: relative;
 }
 
-/* Foto Pequeña Flotante */
+/* imagen pequeña por encima */
 .img-secondary {
   position: absolute;
   bottom: 0;
@@ -269,7 +263,6 @@
   z-index: 1;
 }
 
-/* RESPONSIVE */
 @media (max-width: 992px) {
   .collage-container {
     height: auto;
@@ -282,8 +275,7 @@
   }
   
   .img-secondary {
-    display: none; /* En móvil ocultamos la segunda foto para no saturar */
-    /* O puedes hacerla más pequeña y relativa si prefieres */
+    display: none;
   }
   
   .decoracion-fondo {

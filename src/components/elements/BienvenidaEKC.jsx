@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
-const BienvenidaEKC = () => {
+const BienvenidaEKC = ({sede}) => {
   return (
     <section className="bienvenida-section">
       <Container>
@@ -15,7 +15,7 @@ const BienvenidaEKC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <span className="badge-sede">Sede Canoitas</span>
+              <span className="badge-sede">{sede}</span>
               <h2 className="display-5 fw-bold mb-4 text-dark">
                 {/* Más que una escuela,*/} Texto llamativo, <br /> 
                 <span style={{ color: 'blueviolet' }}>{/*somos una familia.*/} Para los usuarios</span>
@@ -34,11 +34,11 @@ const BienvenidaEKC = () => {
               <div className="d-flex gap-5 border-top pt-4">
                 <div>
                   <h3 className="fw-bold text-dark mb-0">+10</h3>
-                  <small className="text-muted">Años en la zona</small>
+                  <small className="text-muted">Años activos en el lugar</small>
                 </div>
                 <div>
                   <h3 className="fw-bold text-dark mb-0">+500</h3>
-                  <small className="text-muted">Alumnos Felices</small>
+                  <small className="text-muted">Alumnos inscritos</small>
                 </div>
                 <div>
                   <h3 className="fw-bold text-dark mb-0">100%</h3>
@@ -51,7 +51,7 @@ const BienvenidaEKC = () => {
           <Col lg={6}>
             <div className="collage-container">
               <motion.img 
-                // src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                src="src/assets/img/cls-juegos.jpg" 
                 alt="Principal" 
                 className="img-main shadow-lg"
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -62,7 +62,7 @@ const BienvenidaEKC = () => {
               
               {/* Foto Secundaria (Flotante) */}
               <motion.img 
-                // src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                src="src/assets/img/cls-platica.jpeg" 
                 alt="Secundario" 
                 className="img-secondary shadow"
                 initial={{ opacity: 0, y: 50 }}
@@ -71,7 +71,7 @@ const BienvenidaEKC = () => {
                 transition={{ delay: 0.3, duration: 0.8 }}
               />
 
-              <div className="decoracion-fondo"></div>
+              {/* <div className="decoracion-fondo"></div> */}
             </div>
           </Col>
         </Row>

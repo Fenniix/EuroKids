@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { NavbarP, FooterP, ClaseMuestra, Backtop, GaleriaAni, Ventajas, VisitanosEKC, Pruebaform, BienvenidaEKC } from "../components";
+import { NavbarP, FooterP, ClaseMuestra, Backtop, GaleriaAni, Ventajas, VisitanosEKC, PresentForm, BienvenidaEKC } from "../components";
 import "../styles/sucursales.css";
 
 const EkCanoitas = () => {
@@ -39,23 +39,27 @@ const EkCanoitas = () => {
       {/* <div className="box-prueba">
         
       </div> */}
-      <Pruebaform/>
-      {/* <div className="font-pre">
-        <Container className="cont-p cont-animado">
-          <h1 className="display-1 fw-bold">EUROKIDS <br /><span className="letra"> CANOITAS </span></h1>
-        </Container>
-      </div> */}
 
+      <PresentForm
+      titulo={"EuroKids"}
+      destacado={"Canoitas"}
+      />
+     
       {/* Bienvenida */}
-      <BienvenidaEKC/>
+      <BienvenidaEKC
+      sede={"Sede Canoitas"}
+      />
 
       {/* Ventajas */}
       <Ventajas/>
 
       {/* Visitanos - mapa de ubicación */}
-      <VisitanosEKC/>
+      <VisitanosEKC
+      mapaUrl={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.48526020212!2d-93.12890042536718!3d16.75251608403034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecd8f7365ed81f%3A0x1679c94ff8ab27b9!2sEurokids%20Sucursal%20Canoitas%20-%20Ingl%C3%A9s%20para%20ni%C3%B1os!5e0!3m2!1ses-419!2smx!4v1764100067573!5m2!1ses-419!2smx"}
+      />
 
-      <section className="bg-light py-5">
+      <GaleriaAni/>
+      {/* <section className="mb-4 py-5">
         <Container>
           <h2 className="text-center mb-5 fw-bold">Conoce nuestras instalaciones</h2>
           <Row className="g-4">
@@ -75,7 +79,7 @@ const EkCanoitas = () => {
             ))}
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       <ClaseMuestra />
       <FooterP />

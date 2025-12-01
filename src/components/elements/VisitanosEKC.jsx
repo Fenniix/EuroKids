@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import { motion } from 'framer-motion'
 
-const VisitanosEKC = () => {
+const VisitanosEKC = ({mapaUrl}) => {
   return (
     <>
       <section className="sucursal-info-section mt-5">
@@ -68,7 +68,7 @@ const VisitanosEKC = () => {
                 transition={{ duration: 0.5 }}
               >
                 <iframe title="Ubicación EuroKids Canoitas" width="100%" height="450" loading="lazy" allowFullScreen 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.48526020212!2d-93.12890042536718!3d16.75251608403034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecd8f7365ed81f%3A0x1679c94ff8ab27b9!2sEurokids%20Sucursal%20Canoitas%20-%20Ingl%C3%A9s%20para%20ni%C3%B1os!5e0!3m2!1ses-419!2smx!4v1764100067573!5m2!1ses-419!2smx"
+                  src={mapaUrl}
                 ></iframe>
               </motion.div>
             </Col>
