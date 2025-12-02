@@ -1,8 +1,6 @@
-import React from 'react';
 import { Container, Row, Col, Form, FloatingLabel } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
-// 1. Aquí recibimos las "instrucciones" (props) de qué texto poner
 const PresentForm = ({ titulo, destacado }) => {
   
   const handleSubmit = (e) => {
@@ -12,7 +10,7 @@ const PresentForm = ({ titulo, destacado }) => {
 
   return (
     <div className="form-present" id='formulario'>
-      <Container className="position-relative z-2">
+      <Container className="position-relative">
         <Row className="align-items-center py-5">
           <Col lg={7} className="text-black mb-5 mb-lg-0">
             <motion.div
@@ -21,23 +19,19 @@ const PresentForm = ({ titulo, destacado }) => {
               transition={{ duration: 0.8 }}
             >
               <h1 className="display-4 fw-bold mb-3 posicion-text">
-                {/* 2. Aquí usamos la variable 'titulo' (Ej: EuroKids) */}
                 {titulo} 
-                
-                {/* 3. Aquí usamos la variable 'destacado' (Ej: Canoitas) */}
-                {/* Si no mandas nada en 'destacado', el span no mostrará nada */}
                 <span className="text-warning display-1 fw-bold"> {destacado}</span>
               </h1>
-              
-              <p className="lead mb-4">
-                 {/* Aquí dejé el espacio por si luego quieres activar la descripción */}
+
+              {/* En caso de añadir texto desciptivo o iconos aquí */}
+              {/* <p className="lead mb-4">
+
               </p>
-              
               <div className="d-flex gap-4">
                 <div className="d-flex align-items-center">
-                  {/* Espacio para iconos futuros */}
+
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </Col>
 
@@ -49,7 +43,7 @@ const PresentForm = ({ titulo, destacado }) => {
             >
               <div className="form-card shadow-lg">
                 <div className="text-center mb-4">
-                  <h3 className="fw-bold text-dark">¡Solicita Información!</h3>
+                  <h3 className="fw-bold">¡Solicita Información!</h3>
                 </div>
 
                 <Form onSubmit={handleSubmit}>
@@ -75,7 +69,7 @@ const PresentForm = ({ titulo, destacado }) => {
                     <motion.button
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.98 }}
-                      className="btn-form luz"
+                      className="btn-form luz fw-bold"
                       type="submit"
                     >
                       Enviar información

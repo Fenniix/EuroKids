@@ -129,7 +129,7 @@ const GaleriaA2 = () => {
                 onClick={(e) => e.stopPropagation()}
                 initial={{ opacity: 0, y: -30, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: 30, scale: 0.95 }} // ¡Animación de salida!
+                exit={{ opacity: 0, y: 30, scale: 0.95 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
               >
                 <span className="modal-cerrar" onClick={cerrarModal}>

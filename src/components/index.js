@@ -12,7 +12,7 @@ export { default as Backtop } from './elements/BackTop.jsx';
 export { default as Aprenderan } from './elements/Aprenderan.jsx';
 export { default as Ventajas } from './elements/Ventajas.jsx';
 export { default as VisitanosEKC } from './elements/VisitanosEKC.jsx';
-export { default as PresentForm } from './elements/Form-info.jsx';
+export { default as PresentForm } from './elements/PresentForm.jsx';
 export { default as BienvenidaEKC } from './elements/BienvenidaEKC.jsx';
 
 /*Layout*/

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { motion } from "framer-motion";
 

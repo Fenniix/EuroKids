@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import FlagUS from '../../assets/icons/Flag-US.jpg';
 
@@ -51,7 +51,6 @@ const Idiomas = () => {
             whileHover={{ scale: 1.03 }}
             style={{ borderTop: `5px solid ${item.color}` }}
           >
-            {/* --- CAMBIO 1: IMAGEN EN LA CARD --- */}
             <motion.img 
               layoutId={`icono-${item.id}`} 
               className="idioma-img-icono" 
@@ -89,7 +88,7 @@ const Idiomas = () => {
                     className="btn-cerrar"
                     onClick={() => setIdSeleccionado(null)}
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1, transition: { delay: 0.2 } }}
+                    animate={{ opacity: 1, transition: { delay: 0.5 } }}
                   >
                     &times;
                   </motion.button>

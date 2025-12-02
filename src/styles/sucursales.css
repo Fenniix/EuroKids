@@ -144,64 +144,6 @@
   border: 5px solid #fff;
 }
 
-/* PRUEBA DE FORMULARIO CON PRESENTACION */
-.form-present {
-  position: relative;
-  
-  /* En caso de usar una imagen de fondo
-  background-image: url();
-  background-size: cover;
-  background-position: center; 
-  */
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding-top: 80px;
-  background: linear-gradient(0deg, #f5f5f5 0%, #d1d1d1 100%);
-}
-
-.posicion-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 20px;
-  border-top: 5px solid #FFD700;
-}
-
-.btn-form-cont {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.btn-form {
-  padding: 10px 30px;
-  border-radius: 2rem;
-  color: white;
-  /* border: 4px solid #9a00b9; */
-  border: none;
-  background: linear-gradient(135deg, #6a3093 0%, #a044ff 100%);
-  overflow: hidden;
-}
-
-.form-floating > .form-control:focus,
-.form-floating > .form-select:focus {
-  border-color: blueviolet;
-  box-shadow: 0 0 0 0.25rem rgba(138, 43, 226, 0.25);
-}
-
-@media (max-width: 992px) {
-  .form-present {
-    padding-top: 100px;
-    padding-bottom: 50px;
-    height: auto;
-    min-height: auto;
-  }
-}
 
 /* PRUEBA DE SECCION INFORMATIVA DE LA SUCURSAL */
 .bienvenida-section {

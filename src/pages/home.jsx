@@ -1,6 +1,4 @@
-import { Container } from "react-bootstrap"
-import { useEffect, useState } from "react"
-import { FooterP, NavbarP, GaleriaAni, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra, Pruebas, Backtop, Aprenderan, Carrusel, PresentForm } from "../components"
+import { FooterP, NavbarP, Preguntas, CardP, Idiomas, Niveles, NivelesCamino, ClaseMuestra, Pruebas, Backtop, Aprenderan, Carrusel, PresentForm } from "../components"
 import "../styles/home.css"
 
 const home = () => {
@@ -16,6 +14,7 @@ const home = () => {
       {/* Presentación */}
       <PresentForm
       titulo={"EuroKids"}
+      destacado={"Idiomas"}
       />
 
       {/* Idiomas */}
