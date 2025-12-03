@@ -63,7 +63,7 @@ const contenido = [
 
 const PreguntasPrueba2 = () => {
   return (
-    <section className="pt-5 pb-5">
+    <section className="pt-5 pb-5" id="preguntas">
       <Container>
         <div className="text-center mb-5">
           <motion.h2 

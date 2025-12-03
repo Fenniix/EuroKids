@@ -574,20 +574,37 @@
   background-color: #000cb8;
   color: white;
   border: 0;
-  display: flex;
+}
+
+.img-position{
+  flex: none;
+  width: 20%;
+}
+
+.derechos{
+  flex: none;
+  width: max-content;
+}
+
+.horarios p{
+  margin: 0;
+  padding: 3px;
 }
 
 .icons-position{
-  display: flex;
-  width: max-content;
   flex: none;
-
+  width: 20%;
 }
 
 .link-width{
   display: block;
   width: max-content;
   height: max-content;
+  padding-left: 0;
+}
+
+.link-width + .card-link {
+  margin: 0;
 }
 
 .icon-ani{
@@ -636,13 +653,6 @@
   background-color: #1DA1F2;
 }
 
-.derechos{
-  flex: none;
-  position: relative;
-  text-align: center;
-  height: max-content;
-  bottom: 1rem;
-}
 
 /* backtop */
 

@@ -186,12 +186,13 @@
 .btn-info {
   background-color: #333;
   color: white;
-  border: none;
+  border: 4px solid #616161;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 1.6rem;
   cursor: pointer;
-  font-weight: bold;
-  width: 55%;
+  width: 60%;
+  overflow: hidden;
+  transition: all 0.2s ease;
 }
 
 /* ¿Como aprenderan? */

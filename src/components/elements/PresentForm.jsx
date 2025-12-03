@@ -9,7 +9,7 @@ const PresentForm = ({ titulo, destacado }) => {
   };
 
   return (
-    <div className="form-present" id='formulario'>
+    <div className="form-present" id="formulario">
       <Container className="position-relative">
         <Row className="align-items-center py-5">
           <Col lg={7} className="text-black mb-5 mb-lg-0">
@@ -23,7 +23,7 @@ const PresentForm = ({ titulo, destacado }) => {
                 <span className="text-warning display-1 fw-bold"> {destacado}</span>
               </h1>
 
-              {/* En caso de añadir texto desciptivo o iconos aquí */}
+              {/* Como prueba enn caso de añadir texto desciptivo o iconos aquí */}
               {/* <p className="lead mb-4">
 
               </p>

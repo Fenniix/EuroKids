@@ -37,7 +37,7 @@ const Idiomas = () => {
   const [idSeleccionado, setIdSeleccionado] = useState(null);
 
   return (
-    <div className="idiomas-container">
+    <div className="idiomas-container" id="idiomas">
       <h2>Nuestros Idiomas</h2>
       <p className="idiomas-subtitulo">Elige el camino para su futuro</p>
 
@@ -113,7 +113,17 @@ const Idiomas = () => {
                     transition={{ delay: 0.2 }}
                   >
                     <p>{item.descripcion}</p>
-                    <button className="btn-info">Solicitar info de {item.titulo}</button>
+                    <a href="#formulario" className="w-100 text-center">
+                      <motion.button
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="btn-info luz fw-bold"
+                        onClick={() => setIdSeleccionado(null)}
+                      >
+                        Solicitar info de {item.titulo}
+                      </motion.button>
+                    </a>
+                    
                   </motion.div>
                 </motion.div>
               ))}
