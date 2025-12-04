@@ -1,4 +1,4 @@
-import React from 'react';
+import { Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
 const nivelesData = [
@@ -8,7 +8,7 @@ const nivelesData = [
     edad: "3 - 5 años",
     icono: "👶",
     descripcion: "Descubrimiento y Juegos",
-    color: "#FFD166", 
+    color: "#FFD166",
     features: [
       "Estimulación sensorial",
       "Canciones y juegos",
@@ -21,7 +21,7 @@ const nivelesData = [
     edad: "6 - 9 años",
     icono: "👦",
     descripcion: "Crecimiento y Creatividad",
-    color: "#06D6A0", 
+    color: "#06D6A0",
     features: [
       "Lectoescritura divertida",
       "Frases completas",
@@ -34,7 +34,7 @@ const nivelesData = [
     edad: "10 - 15 años",
     icono: "🧑‍🎓",
     descripcion: "Dominio y Certificación",
-    color: "#118AB2", 
+    color: "#118AB2",
     features: [
       "Gramática avanzada",
       "Conversación fluida",
@@ -43,37 +43,35 @@ const nivelesData = [
   }
 ];
 
-const NivelesCamino = () => {
+const Programas = () => {
   return (
-    <section className="camino-section" id="Programas">
-      <div className="camino-header">
+    <section className="programas-section" id="Programas">
+      <Card.Body className="programas-title">
         <h2>Programas por Edades</h2>
-        <p>Acompañamos a tu hijo en cada etapa de su aprendizaje</p>
-      </div>
+        <p className="text-secondary pt-2">Acompañamos a tu hijo en cada etapa de su aprendizaje</p>
+      </Card.Body>
 
-      <div className="camino-container">
-        <div className="linea-conector-fondo"></div>
-
+      <Card.Body className="programas-container">
         {nivelesData.map((nivel, index) => (
-          <div className="camino-step-wrapper" key={nivel.id}>
+          <Card.Body className="d-flex align-items-center flex-grow-0" key={nivel.id}>
             
             <motion.div 
-              className="camino-card"
+              className="programas-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true }} /* No es visible algun cambio */
               transition={{ delay: index * 0.2, type: "spring", stiffness: 60 }}
               whileHover={{ y: -10, borderColor: nivel.color }}
             >
-              <div className="camino-icon-circle" style={{ backgroundColor: nivel.color }}>
+              <Card.Body className="programas-circle" style={{ backgroundColor: nivel.color }}>
                 {nivel.icono}
-              </div>
+              </Card.Body>
               
-              <h3>{nivel.titulo}</h3>
-              <span className="camino-edad">{nivel.edad}</span>
-              <p className="camino-desc">{nivel.descripcion}</p>
+              <h3 className="mt-4 pt-3">{nivel.titulo}</h3>
+              <span className="programas-edad">{nivel.edad}</span>
+              <p className="programas-desc mb-4">{nivel.descripcion}</p>
               
-              <ul className="card-checklist">
+              <ul className="card-checklist p-0">
                 {nivel.features.map((feature, i) => (
                   <li key={i}>
                     <span style={{ color: nivel.color }}>✔</span> {feature}
@@ -84,13 +82,13 @@ const NivelesCamino = () => {
             </motion.div>
 
             {index < nivelesData.length - 1 && (
-              <div className="flecha-conector">➜</div>
+              <Card.Body className="flecha-conector">➜</Card.Body>
             )}
-          </div>
+          </Card.Body>
         ))}
-      </div>
+      </Card.Body>
     </section>
   );
 };
 
-export default NivelesCamino;
+export default Programas;

@@ -6,7 +6,7 @@ export { default as GaleriaAni } from './elements/Galeria-A.jsx';
 export { default as Preguntas } from './elements/PreguntasCol.jsx';
 export { default as Idiomas } from './elements/Idiomas.jsx';
 export { default as Niveles } from './elements/Niveles.jsx';
-export { default as NivelesCamino } from './elements/NivelesCamino.jsx';
+export { default as Programas } from './elements/Programas.jsx';
 export { default as ClaseMuestra } from './elements/ClaseMuestra.jsx';
 export { default as Backtop } from './elements/BackTop.jsx';
 export { default as Aprenderan } from './elements/Aprenderan.jsx';

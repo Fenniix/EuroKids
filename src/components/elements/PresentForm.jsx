@@ -23,7 +23,7 @@ const PresentForm = ({ titulo, destacado }) => {
                 <span className="text-warning display-1 fw-bold"> {destacado}</span>
               </h1>
 
-              {/* Como prueba enn caso de añadir texto desciptivo o iconos aquí */}
+              {/* Como prueba enn caso de añadir texto desciptivo o iconos */}
               {/* <p className="lead mb-4">
 
               </p>
