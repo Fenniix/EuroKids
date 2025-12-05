@@ -453,28 +453,6 @@
 /*Elementos*/
 
 /*Carrusel*/
-
-.carrusel-section{
-  background-color: blueviolet;
-  padding-bottom: 3rem;
-}
-
-.carrusel-section h2{
-  color: white;
-}
-
-.carrusel-cont{
-  gap: 3rem;
-  justify-content: center;
-}
-
-.card-d{
-  width: 25%;
-  /* background-color: #98FF98; */
-}
-
-
-/* Prueba de carrusel */
 .testimonios-section {
   background-color: blueviolet; 
   text-align: center;
@@ -489,11 +467,9 @@
 
 .testimonios-header p {
   color: white;
-  opacity: calc(0.8);
+  opacity: 0.8;
   margin: 0;
 }
-
-/* Contenedor principal del carrusel marquee */
 
 .marquee-container {
   width: 100%;
@@ -509,153 +485,33 @@
   padding-block: 2.5rem;
 }
 
-/* Card dentro del carrusel */
-.testimonio-card {
-  background: white;
-  width: 350px;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
-  flex-shrink: 0;
-}
-
-.testimonio-comillas {
-  font-size: 4rem;
-  color: #FFD700;
-  line-height: 1rem;
-  font-family: serif;
-  margin-bottom: 1rem;
-}
-
-.testimonio-texto {
-  color: #555;
+.hola{
   font-size: 1rem;
-  line-height: 1.6;
-  font-style: italic;
-  margin-bottom: 1.5rem;
-}
-
-.testimonio-autor {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border-top: 1px solid #eee;
-  padding-top: 1rem;
-}
-
-.autor-avatar {
-  width: 45px;
-  height: 45px;
-  background-color: #f0f0f0;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-}
-
-.autor-info h4 {
-  margin: 0;
-  font-size: 1rem;
-  color: #333;
-  font-weight: bold;
-}
-
-.autor-info span {
-  font-size: 0.85rem;
-  color: #888;
 }
 
 
 
 /*Card Promociones*/
 
-.txt-cardP-left{
-  position: absolute;
-  width: 50%;
-  height: 28rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.txt-cardP-left p{
-  width: 85%;
-}
-
-.txt-cardP-right{
-  width: 50%;
-  height: 28rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.txt-cardP-right p{
-  width: 85%;
-}
-
-.posicion-p{
-  width: 100%;
-  height: 100%;
-  position: absolute;
+.card-razon {
+  height: 350px;
   overflow: hidden;
 }
 
-/*Tarjeta derecha*/
-.card-pd{
-  width: 40%;
-  height: 28rem;
-  border-radius: 0;
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-  background: linear-gradient(135deg, #fcff50 0%, #ffff00 100%);
+.card-derecha {
+  border-radius: 2rem;
 }
 
-/*Tarjeta izquierda*/
-.card-pi{
-  width: 40%;
-  height: 28rem;
-  border-radius: 0;
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  background: linear-gradient(135deg, #fcff50 0%, #ffff00 100%);
+.card-izquierda {
+  border-radius: 2rem;
 }
 
-.animate-p-left{
-  opacity: 0;
-}
-
-.animate-p-right{
-  opacity: 0;
-}
-
-.animate-p-left.visible-p-left{
-  opacity: 1;
-  animation: salto-left 1.5s ease-in-out;
-}
-
-.animate-p-right.visible-p-right{
-  opacity: 1;
-  animation: salto-right 1.5s ease-in-out;
-}
-
-@keyframes salto-left {
-  0% { transform: translateX(100%); }
-  50% { transform: translateX(-60px); }
-  100% { transform: translateX(0); }
-}
-
-@keyframes salto-right {
-  0% { transform: translateX(-100%); }
-  50% { transform: translateX(60px); }
-  100% { transform: translateX(0); }
+@media (max-width: 992px) {
+  .card-derecha, .card-izquierda {
+    border-radius: 20px;
+    border: none;
+    height: 250px;
+  }
 }
 
 .Prueba{

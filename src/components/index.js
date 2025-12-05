@@ -1,7 +1,7 @@
 /*Elements*/
 export { default as Carrusel } from './elements/Carrusel.jsx';
 export { default as Cards } from './elements/Cards.jsx';
-export { default as CardP } from './elements/CardP.jsx';
+export { default as CardRazones } from './elements/CardRazones.jsx';
 export { default as GaleriaAni } from './elements/Galeria-A.jsx';
 export { default as Preguntas } from './elements/PreguntasCol.jsx';
 export { default as Idiomas } from './elements/Idiomas.jsx';
