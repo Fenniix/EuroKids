@@ -1,4 +1,4 @@
-import { FooterP, NavbarP, Preguntas, CardRazones, Idiomas, Niveles, ClaseMuestra, Backtop, Aprenderan, Carrusel, PresentForm, Programas } from "../components"
+import { FooterP, NavbarP, Preguntas, CardRazones, Idiomas, Niveles, ClaseMuestra, Backtop, Aprenderan, Carrusel, PresentForm, Programas, Pruebas } from "../components"
 import "../styles/home.css"
 
 const home = () => {
@@ -28,6 +28,7 @@ const home = () => {
 
       {/* Razones */}
       <CardRazones/>
+      {/* <Pruebas/> */}
 
       {/* Carrusel de comentarios */}
       <Carrusel/>

@@ -7,7 +7,7 @@ const nivelesData = [
     titulo: "Titulo",
     edad: "3 - 5 años",
     descripcion: "Despertamos su curiosidad natural.",
-    color: "#FFD166", // Amarillo cálido
+    color: "#FFD166",
     features: [
       "Estimulación sensorial",
       "Canciones y juegos",
@@ -20,7 +20,7 @@ const nivelesData = [
     titulo: "Titulo",
     edad: "6 - 9 años",
     descripcion: "Construimos bases sólidas.",
-    color: "#06D6A0", // Verde menta
+    color: "#06D6A0",
     features: [
       "Lectoescritura divertida",
       "Frases completas",
@@ -33,7 +33,7 @@ const nivelesData = [
     titulo: "Titulo",
     edad: "10 - 15 años",
     descripcion: "Dominio y certificación.",
-    color: "#118AB2", // Azul serio
+    color: "#118AB2",
     features: [
       "Gramática avanzada",
       "Conversación fluida",

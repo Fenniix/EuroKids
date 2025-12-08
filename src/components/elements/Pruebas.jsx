@@ -1,143 +1,133 @@
-// Hero.jsx
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import '../../styles/home.css';
 
-const Hero = () => {
+const springAnim = {
+  type: "spring", stiffness: 100, damping: 8, mass: 0.5
+};
+
+const CardRazones = () => {
   return (
-    <section className="hero-section" style={{ paddingTop: '100px', paddingBottom: '50px' }}>
-      <Container>
-        <Row className="align-items-center">
-          
-          {/* COLUMNA IZQUIERDA: TEXTO */}
-          <Col lg={6}>
-            <motion.h1 
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              style={{ fontSize: '3.5rem', fontWeight: 'bold', color: '#333' }}
-            >
-              El mundo habla <span style={{ color: 'blueviolet' }}>muchos idiomas</span>.
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              style={{ fontSize: '1.2rem', color: '#666', marginTop: '20px' }}
-            >
-              Preparamos a tus hijos para un futuro global con un método divertido, natural y certificado.
-            </motion.p>
-            <div className="mt-4">
-                <Button variant="warning" size="lg" className="text-white fw-bold">Conoce los cursos</Button>
-            </div>
-          </Col>
+    <div className="promociones py-5 overflow-hidden">
+      <Container className='me-0 ms-0 p-0 cambio-width'>
+        <h1 className="text-center mb-5 fw-bold">Razones para elegir EuroKids</h1>
 
-          {/* COLUMNA DERECHA: IMAGEN/ANIMACIÓN */}
-          <Col lg={6} className="text-center">
-            {/* Aquí iría una foto de un niño, o el logo grande animado */}
-             <motion.img 
-                src="src/assets/img/Euro-centro-lg.png" // O una foto de stock de niños
-                alt="Niños aprendiendo"
-                style={{ maxWidth: '100%', maxHeight: '400px' }}
-                animate={{ y: [0, -20, 0] }} // Flotar suavemente
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-             />
+        {/* Card 1 texto izquierda - imagen derecha */}
+        <Row className="align-items-center mb-5 gy-4">
+          {/* Card de texto */}
+          <Col lg={6} className="ps-5 pe-4">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={springAnim}
+              viewport={{ once: true, amount: 0.3 }}
+              className="text-center text-lg-start pe-lg-5 ps-lg-5"
+            >
+              <h2 className="fw-bold mb-3">Aprendizaje Lúdico</h2>
+              <p className="lead text-muted">
+                Olvídate de las clases aburridas. Aquí tus hijos aprenden jugando, 
+                cantando y creando, haciendo que el idioma se vuelva parte natural de su vida.
+              </p>
+            </motion.div>
           </Col>
-
+          {/* card vacia y de img */}
+          <Col lg={6} className="position-relative">
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={springAnim}
+              viewport={{ once: true, amount: 0.3 }}
+              className="d-flex justify-content-end"
+            >
+              <motion.img
+                src="src/assets/icons/niños-1.png" 
+                alt="Niños jugando"
+                className="img-flotante-derecha"
+              />
+              <Card className="card-razon-pru card-derecha-pru shadow-lg border-0"></Card>
+            </motion.div>
+          </Col>
         </Row>
-      </Container>
-    </section>
-  );
-};
 
-const testimonios = [
-  {
-    id: 1,
-    nombre: "Nombre",
-    rol: "¿Que es?-Mama, papa, estudiante",
-    texto: "Descripción",
-    avatar: "👩"
-  },
-  {
-    id: 2,
-    nombre: "Nombre",
-    rol: "¿Que es?-Mama, papa, estudiante",
-    texto: "Descripción",
-    avatar: "👨"
-  },
-  {
-    id: 3,
-    nombre: "Nombre",
-    rol: "¿Que es?-Mama, papa, estudiante",
-    texto: "Descripción",
-    avatar: "👩‍🦱"
-  },
-  {
-    id: 4,
-    nombre: "Nombre",
-    rol: "¿Que es?-Mama, papa, estudiante o lugar",
-    texto: "Descripción",
-    avatar: "🏠"
-  },
-];
-
-const Testimonios = () => {
-  const testimoniosInfinitos = [...testimonios, ...testimonios];
-
-  return (
-    <section className="testimonios-section">
-      <div className="testimonios-header mt-3">
-        <h2>Lo que dicen nuestros estudiantes</h2>
-        <p>La confianza de los padres es nuestra mejor calificación</p>
-      </div>
-
-      <div className="marquee-container">
-        
-        <motion.div 
-          className="marquee-track"
-          animate={{ x: "-50%" }}
-          transition={{ duration: 20, ease: "linear", repeat: Infinity }}
-        >
-          {testimoniosInfinitos.map((item, index) => (
-            <Card 
-              key={index} 
-              className="border-0 shadow-sm rounded-4"
-              style={{ width: '350px', flexShrink: 0 }}
+        {/* Card 2 texto derecha - imagen izquierda */}
+        <Row className="align-items-center mb-5 gy-4 flex-lg-row-reverse">
+          {/* Card de texto */}
+          <Col lg={6} className="ps-4 pe-5">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={springAnim}
+              viewport={{ once: true, amount: 0.3 }}
+              className="text-center text-lg-start pe-lg-5 ps-lg-5"
             >
-              <Card.Body className="p-4 d-flex flex-column justify-content-between">
-                <div>
-                  <div className="display-4 text-warning mb-2" style={{ lineHeight: '2rem' }}>“</div>
-                  <Card.Text className="fst-italic text-secondary">
-                    {item.texto}
-                  </Card.Text>
-                </div>
+              <h2 className="fw-bold mb-3">Certificaciones Oficiales</h2>
+              <p className="lead text-muted">
+                No solo aprenden, lo demuestran. Preparamos a tus hijos para obtener 
+                certificaciones internacionales (Cambridge, DELF) desde temprana edad.
+              </p>
+            </motion.div>
+          </Col>
+          {/* card vacia y de img */}
+          <Col lg={6} className="position-relative">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={springAnim}
+              viewport={{ once: true, amount: 0.3 }}
+              className="d-flex justify-content-start"
+            >
+              <motion.img
+                src="src/assets/icons/niños-1.png" 
+                alt="Niños jugando"
+                className="img-flotante-izquierda"
+              />
+              <Card className="card-razon-pru card-izquierda-pru shadow-lg border-0"></Card>
+            </motion.div>
+          </Col>
+        </Row>
 
-                <div className="d-flex align-items-center mt-3 pt-3 border-top">
-                  <div className="rounded-circle bg-light d-flex align-items-center justify-content-center fs-3 me-3" style={{ width: '45px', height: '45px' }}>
-                    {item.avatar}
-                  </div>
-                  <div>
-                    <Card.Title as="h6" className="mb-0 fw-bold">{item.nombre}</Card.Title>
-                    <Card.Subtitle className="text-muted" style={{ fontSize: '0.85rem' }}>
-                      {item.rol}
-                    </Card.Subtitle>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
+        {/* Card 3 texto izquierda - imagen derecha */}
+        <Row className="align-items-center mb-5 gy-4">
+          {/* Card de texto */}
+          <Col lg={6} className="ps-5 pe-4">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={springAnim}
+              viewport={{ once: true, amount: 0.3 }}
+              className="text-center text-lg-start pe-lg-5 ps-lg-5"
+            >
+              <h2 className="fw-bold mb-3">Aprendizaje Lúdico</h2>
+              <p className="lead text-muted">
+                Olvídate de las clases aburridas. Aquí tus hijos aprenden jugando, 
+                cantando y creando, haciendo que el idioma se vuelva parte natural de su vida.
+              </p>
+            </motion.div>
+          </Col>
+          {/* card vacia y de img */}
+          <Col lg={6} className="position-relative">
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={springAnim}
+              viewport={{ once: true, amount: 0.3 }}
+              className="d-flex justify-content-end"
+            >
+              <motion.img
+                src="src/assets/icons/niños-1.png" 
+                alt="Niños jugando"
+                className="img-flotante-derecha"
+              />
+              <Card className="card-razon-pru card-derecha-pru shadow-lg border-0"></Card>
+            </motion.div>
+          </Col>
+        </Row>
+        
 
-          ))}
-        </motion.div>
-      </div>
-    </section>
+
+      </Container>
+    </div>
   );
 };
 
-const Pruebas = () => {
-  return (
-    <>
-      <Testimonios />
-    
-    </>
-  );
-};
-export default Pruebas;
+export default CardRazones;
