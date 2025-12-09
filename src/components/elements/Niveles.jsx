@@ -62,7 +62,7 @@ const Niveles = () => {
             transition={{ delay: index * 0.2, duration: 0.5 }}
             whileHover={{ y: -10 }}
           >
-            {/* Cabecera de color */}
+            
             <div className="nivel-top" style={{ backgroundColor: nivel.color }}>
               <h3>{nivel.titulo}</h3>
             </div>
@@ -71,7 +71,7 @@ const Niveles = () => {
               <div className="nivel-edad-badge">{nivel.edad}</div>
               <p className="nivel-desc">{nivel.descripcion}</p>
               
-              {/* Lista de características (Checklist) */}
+              
               <ul className="nivel-lista">
                 {nivel.features.map((feature, i) => (
                   <li key={i}>

@@ -410,16 +410,7 @@
 .card-opc{
 }
 
-.cont-animado2{
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
 
-.cont-animado2.visible-2{
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /*Preguntas*/
 
@@ -531,17 +522,19 @@
 
 .card-derecha-pru {
   background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  border-radius: 5rem;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 .card-izquierda-pru {
   background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  border-radius: 5rem;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
-/* Estilos de la Imagen Flotante */
+/* Imagen Flotante */
 .img-flotante-derecha {
   position: absolute;
   top: 50%;

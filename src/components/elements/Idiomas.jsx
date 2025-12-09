@@ -39,7 +39,7 @@ const Idiomas = () => {
   return (
     <div className="idiomas-container" id="idiomas">
       <h2>Nuestros Idiomas</h2>
-      <p className="idiomas-subtitulo">Elige el camino para su futuro</p>
+      <p className="text-muted">Elige el camino para su futuro</p>
 
       <div className="idiomas-grid">
         {idiomasData.map((item) => (

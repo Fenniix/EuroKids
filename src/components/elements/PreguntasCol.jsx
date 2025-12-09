@@ -1,67 +1,30 @@
 import { Accordion, Container, Row, Col } from "react-bootstrap";
 import { motion } from 'framer-motion';
 
-const PreguntasPrueba1 = () => {
-  return(
-    <>
-      <div className="d-flex flex-column align-items-center pt-5 pb-5">
-        <h2 className="m-0">Preguntas frecuentes</h2>
-        <Accordion className="pregunta">
-
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>Accordion Item #1</Accordion.Header>
-            <Accordion.Body className="respuesta">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>Accordion Item #2</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>Accordion Item #3</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>Accordion Item #4</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            </Accordion.Body>
-          </Accordion.Item>
-
-        </Accordion>
-      </div>
-    </>
-  )
-}
-
 const contenido = [
   {
+    id: "1",
     question: "¿A partir de qué edad pueden ingresar?",
     answer: "Respuesta."
   },
   {
+    id: "2",
     question: "¿Cuántos alumnos hay por grupo?",
     answer: "Respuesta."
   },
   {
+    id: "3",
     question: "¿Tienen certificaciones oficiales?",
     answer: "Respuesta."
   },
   {
+    id: "4",
     question: "¿Ofrecen clases de recuperación?",
     answer: "Respuesta."
   },
 ];
 
-const PreguntasPrueba2 = () => {
+const Preguntas = () => {
   return (
     <section className="pt-5 pb-5" id="preguntas">
       <Container>
@@ -88,7 +51,7 @@ const PreguntasPrueba2 = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.9 }}
                 >
-                  <Accordion.Item eventKey={index.toString()} className="mb-3 border-0 shadow-sm overflow-hidden">
+                  <Accordion.Item eventKey={item.id} className="mb-3 border-0 shadow-sm overflow-hidden">
                     <Accordion.Header>
                       <span>{item.question}</span>
                     </Accordion.Header>
@@ -105,15 +68,5 @@ const PreguntasPrueba2 = () => {
     </section>
   );
 };
-
-const Preguntas = () => {
-
-  return(
-    <>
-      {/* <PreguntasPrueba1/> */}
-      <PreguntasPrueba2/>
-    </>
-  )
-}
 
 export default Preguntas;

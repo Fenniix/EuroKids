@@ -27,8 +27,8 @@ const home = () => {
       <Programas/>
 
       {/* Razones */}
-      <CardRazones/>
-      {/* <Pruebas/> */}
+      {/* <CardRazones/> */}
+      <Pruebas/>
 
       {/* Carrusel de comentarios */}
       <Carrusel/>
