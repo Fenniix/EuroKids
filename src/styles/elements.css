@@ -8,6 +8,16 @@
   background: linear-gradient(0deg, #f5f5f5 0%, #d1d1d1 100%);
 }
 
+/* imagen para llenar el vacio del inicio */
+.img-niño {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -2rem;
+  left: -2rem;
+}
+
 .posicion-text {
   display: flex;
   flex-direction: column;
@@ -351,9 +361,7 @@
 }
 
 .cta-disclaimer {
-  font-size: 0.85rem !important;
   margin-top: 2rem;
-  opacity: 0.7;
   font-style: italic;
 }
 
@@ -455,44 +463,12 @@
 
 /*Footer*/
 
-.card-footer{
+.footer-section {
   background-color: #000cb8;
-  color: white;
-  border: 0;
+  position: relative;
 }
 
-.img-position{
-  flex: none;
-  width: 20%;
-}
-
-.derechos{
-  flex: none;
-  width: max-content;
-}
-
-.horarios p{
-  margin: 0;
-  padding: 3px;
-}
-
-.icons-position{
-  flex: none;
-  width: 20%;
-}
-
-.link-width{
-  display: block;
-  width: max-content;
-  height: max-content;
-  padding-left: 0;
-}
-
-.link-width + .card-link {
-  margin: 0;
-}
-
-.icon-ani{
+.icon-ani {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -500,43 +476,40 @@
   height: 3rem;
   background-color: white;
   border-radius: 0.8rem;
-  z-index: 1;
-  overflow: hidden;
   position: relative;
-  color: #000000;
+  overflow: hidden;
+  color: #000;
   transition: color 0.3s ease;
 }
 
-.icon-ani:hover{
+.icon-ani:hover {
   color: white;
+  cursor: pointer;
 }
 
-.icon-ani::after{
+.icon-ani::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
-  z-index: -1;
+  /* Animación de llenado */
   transform: translateY(100%);
   transition: transform 0.3s ease;
 }
 
-.icon-ani:hover::after{
+.icon-ani:hover::after {
   transform: translateY(0%);
 }
 
-.ani-facebook::after {
-  background-color: #1877F2;
-}
+/* Colores específicos */
+.ani-facebook::after { background-color: #1877F2; }
+.ani-instagram::after { background-image: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.ani-twitter::after { background-color: #000; } /* X es negro ahora */
 
-.ani-instagram::after {
-  background-image: linear-gradient( 45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100% );
-}
-
-.ani-twitter::after {
+/* .ani-twitter::after {
   background-color: #1DA1F2;
-}
+} */
 
 
 /* backtop */

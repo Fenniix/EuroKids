@@ -1,35 +1,35 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Container, Row, Col } from 'react-bootstrap';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Container, Row, Col } from "react-bootstrap";
 
 const imagenes = [
   {
     id: 1,
     src: "src/assets/img/cls-interactiva.jpg",
-    alt: 'Descripción de la imagen 1',
-    titulo: 'Aprendizaje Temprano',
-    descripcion: 'Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.',
+    alt: "Descripción de la imagen 1",
+    titulo: "Aprendizaje Temprano",
+    descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
   },
   {
     id: 2,
     src: "src/assets/img/cls-interactiva.jpg",
-    alt: 'Descripción de la imagen 2',
-    titulo: 'Aprendizaje Temprano',
-    descripcion: 'Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.',
+    alt: "Descripción de la imagen 2",
+    titulo: "Aprendizaje Temprano",
+    descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
   },
   {
     id: 3,
     src: "src/assets/img/cls-interactiva.jpg",
-    alt: 'Descripción de la imagen 3',
-    titulo: 'Aprendizaje Temprano',
-    descripcion: 'Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.',
+    alt: "Descripción de la imagen 3",
+    titulo: "Aprendizaje Temprano",
+    descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
   },
   {
     id: 4,
     src: "src/assets/img/cls-interactiva.jpg",
-    alt: 'Descripción de la imagen 4',
-    titulo: 'Aprendizaje Temprano',
-    descripcion: 'Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.',
+    alt: "Descripción de la imagen 4",
+    titulo: "Aprendizaje Temprano",
+    descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
   },
 ];
 

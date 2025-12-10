@@ -41,7 +41,7 @@ const CardRazones = () => {
               viewport={{ once: true, amount: 0.3 }}
             >
               <Card className="card-razon card-derecha shadow-lg border-0">
-                <Card.Img 
+                <Card.Img
                   src="src/assets/img/cls-platica.jpeg"
                   alt="Niños jugando"
                   className="img-fluid h-100 object-fit-cover"

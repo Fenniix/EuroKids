@@ -16,9 +16,9 @@ const BienvenidaEKC = ({sede}) => {
               transition={{ duration: 0.8 }}
             >
               <span className="badge-sede">{sede}</span>
-              <h2 className="display-5 fw-bold mb-4 text-dark">
+              <h2 className="display-5 fw-bold mb-4">
                 {/* Más que una escuela,*/} Texto llamativo, <br /> 
-                <span style={{ color: 'blueviolet' }}>{/*somos una familia.*/} Para los usuarios</span>
+                <span className="color-sede">{/*somos una familia.*/} Para los usuarios.</span>
               </h2>
               
               <p className="lead text-muted mb-4">
@@ -60,7 +60,7 @@ const BienvenidaEKC = ({sede}) => {
                 transition={{ duration: 0.8 }}
               />
               
-              {/* Foto Secundaria (Flotante) */}
+              {/* Foto Secundaria - flotante */}
               <motion.img 
                 src="src/assets/img/cls-platica.jpeg" 
                 alt="Secundario" 
@@ -70,8 +70,6 @@ const BienvenidaEKC = ({sede}) => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.8 }}
               />
-
-              {/* <div className="decoracion-fondo"></div> */}
             </div>
           </Col>
         </Row>

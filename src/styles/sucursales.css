@@ -63,10 +63,6 @@
   height: 18rem;
 }
 
-.ventajas {
-  height: 25rem;
-}
-
 .sucursal-info-section {
   padding: 5rem 0;
   background-color: #fff;
@@ -145,7 +141,7 @@
 }
 
 
-/* PRUEBA DE SECCION INFORMATIVA DE LA SUCURSAL */
+/* Bienbenida - Información acerca de la sede */
 .bienvenida-section {
   padding: 6rem 0;
   background-color: #fff;
@@ -160,6 +156,10 @@
   color: #ffd700;
   margin-bottom: 1rem;
   display: block;
+}
+
+.color-sede {
+  color: blueviolet;
 }
 
 .collage-container {
@@ -192,17 +192,6 @@
   border-radius: 20px;
   border: 5px solid #fff;
   z-index: 3;
-}
-
-.decoracion-fondo {
-  position: absolute;
-  top: -20px;
-  right: 0;
-  width: 300px;
-  height: 300px;
-  background-color: #f0f0f0;
-  border-radius: 50%;
-  z-index: 1;
 }
 
 @media (max-width: 992px) {

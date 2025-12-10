@@ -32,10 +32,19 @@ const PresentForm = ({ titulo, destacado }) => {
 
                 </div>
               </div> */}
+              
             </motion.div>
           </Col>
+          {/* imagen para llenar el vacio del inicio */}
+          {/* <motion.div
+            initial={{opacity: 0, y: 50}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.8}}
+            className="img-niño">
+            <img src="src/assets/img/niño-inicio.webp" alt="" width={"40%"}/>
+          </motion.div> */}
 
-          <Col lg={5} className="">
+          <Col lg={5} className="z-1">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
