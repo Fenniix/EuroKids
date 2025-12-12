@@ -1,8 +1,7 @@
-import React from 'react'
-import { Container, Row, Col, Card, Button } from 'react-bootstrap'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 import { motion } from 'framer-motion'
 
-const VisitanosEKC = ({mapaUrl}) => {
+const VisitanosEKC = ({nombre ,direccion , telefono, horarios, mapaUrl}) => {
   return (
     <>
       <section className="sucursal-info-section mt-5">
@@ -24,8 +23,7 @@ const VisitanosEKC = ({mapaUrl}) => {
                   <div>
                     <h5>Dirección</h5>
                     <p className="text-muted">
-                      Av 3a. Sur Pte 1204, Las Canoitas,<br />
-                      29060 Tuxtla Gutiérrez, Chis.
+                      {direccion}
                     </p>
                   </div>
                 </div>
@@ -36,7 +34,7 @@ const VisitanosEKC = ({mapaUrl}) => {
                   </div>
                   <div>
                     <h5>Teléfono</h5>
-                    <p className="text-muted">961 611 3802</p>
+                    <p className="text-muted">{telefono}</p>
                   </div>
                 </div>
 
@@ -46,14 +44,14 @@ const VisitanosEKC = ({mapaUrl}) => {
                   </div>
                   <div>
                     <h5>Horarios de Atención</h5>
-                    <p className="text-muted mb-0">Lunes a Viernes: 9:00 AM - 8:00 PM</p>
-                    <p className="text-muted">Sábados: 9:00 AM - 3:00 PM</p>
+                    <p className="text-muted mb-0">{horarios.semana}</p>
+                    <p className="text-muted">{horarios.sabado}</p>
                   </div>
                 </div>
 
                 <div className="mt-4 d-flex justify-content-center">
                   <Button className="btn-message luz">
-                     Enviar Mensaje a Canoitas
+                     Enviar Mensaje a {nombre}
                   </Button>
                 </div>
               </motion.div>

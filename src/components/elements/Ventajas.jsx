@@ -1,6 +1,7 @@
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { motion } from "framer-motion";
 
+// Prompts para un mejor manejo de la información de las tarjetas
 const ventajasData = [
   {
     id: 1,
@@ -32,6 +33,7 @@ const ventajasData = [
   }
 ];
 
+// Uso de const para controlar la aparicion de las tarjetas dependiendo de la aparicion de contenedor padre
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -53,7 +55,7 @@ const cardVariants = {
 
 const Ventajas = () => {
   return (
-    <section className="py-5" style={{ backgroundColor: '#f8f9fa' }}>
+    <section className="py-5">
       <Container>
         <div className="text-center mb-5">
           <h2 className="fw-bold text-dark">Ventajas de elegir EuroKids Canoitas</h2>
@@ -64,27 +66,27 @@ const Ventajas = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }} // controla si la animacion se repite o no
         >
           <Row className="g-4">
             {ventajasData.map((item) => (
-              <Col md={6} lg={3} key={item.id}>
-                <motion.div variants={cardVariants}>
+              <Col md={6} lg={3} key={item.id} >
+                <motion.div variants={cardVariants} className="">
                   <Card 
-                    className="border-0 shadow-sm text-center py-4 px-3 card-ventajas"
-                    style={{ borderRadius: '20px', cursor: 'default' }}
+                    className="border-0 text-center py-4 px-3 card-ventajas"
                     as={motion.div}
-                    whileHover={{ y: -10, boxShadow: "0 15px 30px rgba(0,0,0,0.1)" }}
+                    whileHover={{ y: -10 }}
                   >
                     <div 
                       className="d-flex align-items-center justify-content-center mx-auto mb-3"
+                      // CSS Puesto aqui debido a el uso de item.color
                       style={{ 
-                        width: '70px', 
-                        height: '70px', 
-                        borderRadius: '50%', 
+                        width: "70px", 
+                        height: "70px", 
+                        borderRadius: "50%", 
                         backgroundColor: `${item.color}20`,
                         color: item.color,
-                        fontSize: '2rem'
+                        fontSize: "2rem"
                       }}
                     >
                       {item.icono}

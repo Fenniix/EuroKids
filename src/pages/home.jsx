@@ -1,7 +1,9 @@
 import { FooterP, NavbarP, Preguntas, CardRazones, Idiomas, Niveles, ClaseMuestra, Backtop, Aprenderan, Carrusel, PresentForm, Programas, Pruebas } from "../components"
+import { presentformData } from "../Data/EurokData";
 import "../styles/home.css"
 
 const home = () => {
+  const presentforminfo = presentformData.home;
 
   return (
     <>
@@ -13,8 +15,7 @@ const home = () => {
 
       {/* Presentación */}
       <PresentForm
-      titulo={"EuroKids"}
-      destacado={"Idiomas"}
+      {...presentforminfo}
       />
 
       {/* Idiomas */}

@@ -1,8 +1,7 @@
-import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
-const BienvenidaEKC = ({sede}) => {
+const BienvenidaEKC = ({ sucursal, titulo, tituloSpan}) => {
   return (
     <section className="bienvenida-section">
       <Container>
@@ -15,10 +14,10 @@ const BienvenidaEKC = ({sede}) => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <span className="badge-sede">{sede}</span>
+              <span className="badge-sede">{sucursal}</span>
               <h2 className="display-5 fw-bold mb-4">
-                {/* Más que una escuela,*/} Texto llamativo, <br /> 
-                <span className="color-sede">{/*somos una familia.*/} Para los usuarios.</span>
+                {titulo} <br /> 
+                <span className="color-sede">{tituloSpan}</span>
               </h2>
               
               <p className="lead text-muted mb-4">

@@ -493,7 +493,6 @@
   width: 100%;
   height: 100%;
   top: 0;
-  /* Animación de llenado */
   transform: translateY(100%);
   transition: transform 0.3s ease;
 }
@@ -502,14 +501,15 @@
   transform: translateY(0%);
 }
 
-/* Colores específicos */
-.ani-facebook::after { background-color: #1877F2; }
-.ani-instagram::after { background-image: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-.ani-twitter::after { background-color: #000; } /* X es negro ahora */
-
-/* .ani-twitter::after {
+.ani-facebook::after {
+  background-color: #1877F2;
+}
+.ani-instagram::after {
+  background-image: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.ani-twitter::after {
   background-color: #1DA1F2;
-} */
+}
 
 
 /* backtop */

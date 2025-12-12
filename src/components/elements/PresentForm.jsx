@@ -1,7 +1,7 @@
 import { Container, Row, Col, Form, FloatingLabel } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
-const PresentForm = ({ titulo, destacado }) => {
+const PresentForm = ({ titulo, tituloSpan }) => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ const PresentForm = ({ titulo, destacado }) => {
             >
               <h1 className="display-4 fw-bold mb-3 posicion-text">
                 {titulo} 
-                <span className="text-warning display-1 fw-bold"> {destacado}</span>
+                <span className="text-warning display-1 fw-bold"> {tituloSpan}</span>
               </h1>
 
               {/* Como prueba enn caso de añadir texto desciptivo o iconos */}
