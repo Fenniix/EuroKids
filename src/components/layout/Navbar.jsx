@@ -1,5 +1,6 @@
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { motion } from "framer-motion";
+import { Sucursalesnav } from "../index"
 
 const LinkAnimado = ({ href, children }) => {
   return (
@@ -32,23 +33,21 @@ const NavbarP = () => {
           <motion.img 
             whileHover={{ scale: 1.1, rotate: -5 }}
             alt="EuroKids Logo" 
-            src="src/assets/img/Logo - Kids.webp" 
+            src="/img/Logo - Kids.webp" 
             height="60" 
             className="d-inline-block align-top ms-3 me-2 z-1 position-relative"
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className='nav-position'>
+        <Navbar.Collapse id="basic-navbar-nav" className="nav-position">
           <Nav className="mx-auto justify-content-center" style={{ flex: 1 }}>
             <LinkAnimado href="#idiomas">
               <p className="m-0">Idiomas</p>
             </LinkAnimado>
-            <NavDropdown title={<span className="dropdown-title">Sucursales</span>} id="nav-dropdown" className="mx-3 color-texto">
-              <NavDropdown.Item href="/Ekcanoitas">EK Canoitas</NavDropdown.Item>
-              <NavDropdown.Item href="/Ekmoctezuma">EK Moctezuma</NavDropdown.Item>
-              <NavDropdown.Item href="/Eklaureles">EK Laureles</NavDropdown.Item>
-              <NavDropdown.Item href="/">Inicio</NavDropdown.Item>
-            </NavDropdown>
+
+            {/* Componente en donde se ubica la navegación entre las sucursales */}
+            <Sucursalesnav/>
+
             <LinkAnimado href="#preguntas">
               <p className="m-0">Preguntas</p>
             </LinkAnimado>

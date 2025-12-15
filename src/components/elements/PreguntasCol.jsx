@@ -1,7 +1,8 @@
 import { Accordion, Container, Row, Col } from "react-bootstrap";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-const contenido = [
+// información dentro de cada pregunta
+const preguntasData = [
   {
     id: "1",
     question: "¿A partir de qué edad pueden ingresar?",
@@ -34,7 +35,7 @@ const Preguntas = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="fw-bold"
-            style={{ color: '#333' }}
+            style={{ color: "#333" }}
           >
             ¿Tienes dudas?
           </motion.h2>
@@ -44,7 +45,7 @@ const Preguntas = () => {
         <Row className="justify-content-center">
           <Col md={10} lg={8}>
             <Accordion className="accordion-sec">
-              {contenido.map((item, index) => (
+              {preguntasData.map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}

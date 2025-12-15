@@ -1,5 +1,5 @@
-import { Container, Row, Col } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+import { Container, Row, Col } from "react-bootstrap";
+import { motion } from "framer-motion";
 import "../../styles/elements.css";
 
 const FooterP = () => {
@@ -13,7 +13,7 @@ const FooterP = () => {
             <motion.img 
               whileHover={{ scale: 1.05 }}
               alt="EuroKids Logo" 
-              src="src/assets/img/Logo - Kids.webp" 
+              src="/img/Logo - Kids.webp" 
               height="90"
               className="object-fit-contain"
             />
@@ -24,7 +24,7 @@ const FooterP = () => {
             <h5 className="fw-bold mb-3 text-warning">¡Contáctanos!</h5>
             <div className="horarios-info">
               <p className="mb-1 d-flex align-items-center justify-content-center gap-2">
-                <img src="src/assets/icons/Phone-wts.png" alt="WhatsApp" width="24" />
+                <img src="/icons/Phone-wts.png" alt="WhatsApp" width="24" />
                 <span className="fw-bold">+52 961 180 9491</span>
               </p>
               <div className="mt-3">
@@ -62,7 +62,6 @@ const FooterP = () => {
 
         {/* Copyright */}
         <hr className="my-4 border-light opacity-25" />
-        
         <Row>
           <Col className="text-center text-white-50 small">
             <p className="mb-0">

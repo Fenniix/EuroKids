@@ -1,42 +1,46 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import FlagUS from '../../assets/icons/Flag-US.jpg';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import FlagUS from "/icons/Flag-US.jpg";
 
 const idiomasData = [
   {
-    id: 'ing',
-    titulo: 'Inglés',
+    id: "ing",
+    titulo: "Inglés",
     icono: FlagUS, 
-    descripcion: 'El idioma universal. Preparamos a tus hijos para certificaciones Cambridge desde niveles iniciales con métodos 100% conversacionales.',
-    color: '#E63946'
+    descripcion: "El idioma universal. Preparamos a tus hijos para certificaciones Cambridge desde niveles iniciales con métodos 100% conversacionales.",
+    color: "#E63946"
   },
   {
-    id: 'fra',
-    titulo: 'Francés',
-    icono: 'https://flagcdn.com/w320/fr.png',
-    descripcion: 'El idioma de la cultura y las artes. Clases dinámicas enfocadas en la pronunciación y la inmersión cultural temprana.',
-    color: '#457B9D'
+    id: "fra",
+    titulo: "Francés",
+    icono: "https://flagcdn.com/w320/fr.png",
+    descripcion: "El idioma de la cultura y las artes. Clases dinámicas enfocadas en la pronunciación y la inmersión cultural temprana.",
+    color: "#457B9D"
   },
   {
-    id: 'ale',
-    titulo: 'Alemán',
-    icono: 'https://flagcdn.com/w320/de.png',
-    descripcion: 'Desarrolla el pensamiento lógico. Ideal para niños curiosos, con materiales didácticos traídos directamente de Alemania.',
-    color: '#F4A261'
+    id: "ale",
+    titulo: "Alemán",
+    icono: "https://flagcdn.com/w320/de.png",
+    descripcion: "Desarrolla el pensamiento lógico. Ideal para niños curiosos, con materiales didácticos traídos directamente de Alemania.",
+    color: "#F4A261"
   },
   {
-    id: 'ita',
-    titulo: 'Italiano',
-    icono: 'https://flagcdn.com/w320/it.png',
-    descripcion: 'Divertido y sonoro. Un acercamiento amigable a una nueva lengua a través de la música, la cocina y el juego.',
-    color: '#35be63ff'
+    id: "ita",
+    titulo: "Italiano",
+    icono: "https://flagcdn.com/w320/it.png",
+    descripcion: "Divertido y sonoro. Un acercamiento amigable a una nueva lengua a través de la música, la cocina y el juego.",
+    color: "#35be63ff"
   }
 ];
 
 const Idiomas = () => {
+  
+  // manejador de estado de las cards
   const [idSeleccionado, setIdSeleccionado] = useState(null);
 
   return (
+    
+    // card pequeña del idioma
     <div className="idiomas-container" id="idiomas">
       <h2>Nuestros Idiomas</h2>
       <p className="text-muted">Elige el camino para su futuro</p>
@@ -65,7 +69,8 @@ const Idiomas = () => {
           </motion.div>
         ))}
       </div>
-
+      
+      {/* modal despues de hacer click */}
       <AnimatePresence>
         {idSeleccionado && (
           <>

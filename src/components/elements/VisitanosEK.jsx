@@ -1,7 +1,7 @@
-import { Container, Row, Col, Button } from 'react-bootstrap'
-import { motion } from 'framer-motion'
+import { Container, Row, Col, Button } from "react-bootstrap"
+import { motion } from "framer-motion"
 
-const VisitanosEKC = ({nombre ,direccion , telefono, horarios, mapaUrl}) => {
+const visitanosEK = ({nombre ,direccion , telefono, horarios, mapaUrl}) => {
   return (
     <>
       <section className="sucursal-info-section mt-5">
@@ -12,7 +12,6 @@ const VisitanosEKC = ({nombre ,direccion , telefono, horarios, mapaUrl}) => {
               <motion.div 
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true }}
               >
                 <h2 className="mb-4 text-primary fw-bold d-flex justify-content-center">Visítanos</h2>
                 
@@ -62,7 +61,6 @@ const VisitanosEKC = ({nombre ,direccion , telefono, horarios, mapaUrl}) => {
                 className="map-container shadow-lg"
                 initial={{ scale: 0.9, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
                 <iframe title="Ubicación EuroKids Canoitas" width="100%" height="450" loading="lazy" allowFullScreen 
@@ -79,4 +77,4 @@ const VisitanosEKC = ({nombre ,direccion , telefono, horarios, mapaUrl}) => {
   )
 }
 
-export default VisitanosEKC
+export default visitanosEK

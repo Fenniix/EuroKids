@@ -450,13 +450,13 @@
   overflow: hidden;
 }
 
-.testimonios-header h2 {
+.testimonios-title h2 {
   color: white;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
-.testimonios-header p {
+.testimonios-title p {
   color: white;
   opacity: 0.8;
   margin: 0;
@@ -469,7 +469,7 @@
   -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
 
-.marquee-track {
+.marquee {
   display: flex;
   gap: 2rem;
   width: max-content;

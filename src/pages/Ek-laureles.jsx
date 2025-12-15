@@ -1,12 +1,15 @@
-import { NavbarP, FooterP, ClaseMuestra, Backtop, GaleriaAni, Ventajas, VisitanosEKC, PresentForm, BienvenidaEKC } from "../components";
-import { bienvenidaData, visitanosData, presentformData } from "../Data/EurokData";
+import { NavbarP, FooterP, ClaseMuestra, Backtop, GaleriaAni, Ventajas, VisitanosEK, PresentForm, BienvenidaEK } from "../components";
+import { bienvenidaData, visitanosData, presentformData, ventajasData, galeriaData } from "../Data/EurokData";
 import "../styles/sucursales.css";
 
 
 const EkCanoitas = () => {
   const presentforminfo = presentformData.laureles;
   const bienvenidainfo = bienvenidaData.laureles;
+  const ventajasinfo = ventajasData.laureles;
   const visitanosinfo = visitanosData.laureles;
+  const galeriainfo = galeriaData.laureles;
+
   return (
     <>
 
@@ -25,20 +28,29 @@ const EkCanoitas = () => {
       />
 
       {/* Bienvenida */}
-      <BienvenidaEKC
+      <BienvenidaEK
       {...bienvenidainfo}
       />
 
       {/* Ventajas */}
-      <Ventajas/>
+      <Ventajas
+      datos = {ventajasinfo}
+      />
 
       {/* Visitanos - mapa de ubicación */}
-      <VisitanosEKC
+      <VisitanosEK
       {...visitanosinfo}
       />
 
-      <GaleriaAni/>
+      {/* Galeria de imagenes con texto descriptivo */}
+      <GaleriaAni
+      imagenes = {galeriainfo}
+      />
+
+      {/* Clase muestra para el alumno/a */}
       <ClaseMuestra />
+
+      {/* Footer */}
       <FooterP />
     </>
   );

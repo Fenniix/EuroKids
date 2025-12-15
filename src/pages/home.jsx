@@ -28,14 +28,14 @@ const home = () => {
       <Programas/>
 
       {/* Razones */}
-      {/* <CardRazones/> */}
-      <Pruebas/>
+      <CardRazones/>
+      {/* <Pruebas/> */}
 
       {/* Carrusel de comentarios */}
       <Carrusel/>
 
       {/* Seccion pendiente de contenido y nombre */}
-      <Niveles/>
+      {/* <Niveles/> */}
 
       {/*Preguntas frecuentes*/}
       <Preguntas/>

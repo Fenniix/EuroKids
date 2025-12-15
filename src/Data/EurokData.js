@@ -1,3 +1,5 @@
+// Archivo en donde se encuentra todo el contenido de las sucursales para facilitar cambios
+
 export const presentformData = {
   
   // inicio
@@ -27,39 +29,154 @@ export const presentformData = {
 
 
 export const bienvenidaData = {
+
   // Canoitas
   canoitas: {
     sucursal: "sucursal canoitas",
     titulo: "Más que una escuela,",
-    tituloSpan: "somos una familia."
+    tituloSpan: "somos una familia.",
+    añosAct: "+10",
+    alumnIns: "+500",
+    certificados: "100%",
+    imgPrincipal: "/img/cls-juegos.jpg",
+    imgSecundaria: "/img/cls-platica.jpeg"
   },
+
   // Moctezuma
   moctezuma: {
     sucursal: "sucursal moctezuma",
     titulo: "Más que una escuela,",
-    tituloSpan: "somos una familia."
+    tituloSpan: "somos una familia.",
+    añosAct: "+10",
+    alumnIns: "+500",
+    certificados: "100%",
+    imgPrincipal: "/img/cls-juegos.jpg",
+    imgSecundaria: "/img/cls-platica.jpeg"
   },
+
   // Laureles
   laureles: {
     sucursal: "sucursal laureles",
     titulo: "Más que una escuela,",
-    tituloSpan: "somos una familia."
+    tituloSpan: "somos una familia.",
+    añosAct: "+10",
+    alumnIns: "+500",
+    certificados: "100%",
+    imgPrincipal: "/img/cls-juegos.jpg",
+    imgSecundaria: "/img/cls-platica.jpeg"
   }
 };
 
 export const ventajasData = {
+
   // Canoitas
   canoitas: {
+    sucursal: "Canoitas",
+    items: [
+      {
+        id: 1,
+        icono: "/icons/climate-icon.png",
+        titulo: "Aulas Climatizadas",
+        texto: "Sabemos que el calor en Tuxtla es fuerte. Todas nuestras aulas cuentan con aire acondicionado para que el aprendizaje sea fresco y cómodo.",
+        color: "#00b4d8"
+      },
+      {
+        id: 2,
+        titulo: "Fácil Acceso",
+        icono: "/icons/access-icon.png",
+        texto: "Ubicados en una zona estratégica para evitar el tráfico pesado del centro. Llegar y dejar a tus hijos es rápido y sin estrés.",
+        color: "#f4a261"
+      },
+      {
+        id: 3,
+        titulo: "Seguridad Total",
+        icono: "/icons/security-icon.png",
+        texto: "Circuito cerrado de cámaras y control estricto de entrada/salida. Solo tú o personas autorizadas pueden recoger a los alumnos.",
+        color: "#2a9d8f"
+      },
+      {
+        id: 4,
+        titulo: "WiFi en Sala de Espera",
+        icono: "/icons/wifi-icon.png",
+        texto: "¿Llegaste temprano? Disfruta de nuestra conexión gratuita en la sala de espera mientras tus hijos terminan su clase.",
+        color: "#9b5de5"
+      }
+    ]
   },
+    
   // Moctezuma
   moctezuma: {
+    sucursal: "Moctezuma",
+    items: [
+      {
+        id: 1,
+        icono: "/icons/climate-icon.png",
+        titulo: "Aulas Climatizadas",
+        texto: "Sabemos que el calor en Tuxtla es fuerte. Todas nuestras aulas cuentan con aire acondicionado para que el aprendizaje sea fresco y cómodo.",
+        color: "#00b4d8"
+      },
+      {
+        id: 2,
+        titulo: "Fácil Acceso",
+        icono: "/icons/access-icon.png",
+        texto: "Ubicados en una zona estratégica para evitar el tráfico pesado del centro. Llegar y dejar a tus hijos es rápido y sin estrés.",
+        color: "#f4a261"
+      },
+      {
+        id: 3,
+        titulo: "Seguridad Total",
+        icono: "/icons/security-icon.png",
+        texto: "Circuito cerrado de cámaras y control estricto de entrada/salida. Solo tú o personas autorizadas pueden recoger a los alumnos.",
+        color: "#2a9d8f"
+      },
+      {
+        id: 4,
+        titulo: "WiFi en Sala de Espera",
+        icono: "/icons/wifi-icon.png",
+        texto: "¿Llegaste temprano? Disfruta de nuestra conexión gratuita en la sala de espera mientras tus hijos terminan su clase.",
+        color: "#9b5de5"
+      }
+    ]
   },
+
   // Laureles
   laureles: {
-  }
+    sucursal: "Laureles",
+    items: [
+      {
+        id: 1,
+        icono: "/icons/climate-icon.png",
+        titulo: "Aulas Climatizadas",
+        texto: "Sabemos que el calor en Tuxtla es fuerte. Todas nuestras aulas cuentan con aire acondicionado para que el aprendizaje sea fresco y cómodo.",
+        color: "#00b4d8"
+      },
+      {
+        id: 2,
+        titulo: "Fácil Acceso",
+        icono: "/icons/access-icon.png",
+        texto: "Ubicados en una zona estratégica para evitar el tráfico pesado del centro. Llegar y dejar a tus hijos es rápido y sin estrés.",
+        color: "#f4a261"
+      },
+      {
+        id: 3,
+        titulo: "Seguridad Total",
+        icono: "/icons/security-icon.png",
+        texto: "Circuito cerrado de cámaras y control estricto de entrada/salida. Solo tú o personas autorizadas pueden recoger a los alumnos.",
+        color: "#2a9d8f"
+      },
+      {
+        id: 4,
+        titulo: "WiFi en Sala de Espera",
+        icono: "/icons/wifi-icon.png",
+        texto: "¿Llegaste temprano? Disfruta de nuestra conexión gratuita en la sala de espera mientras tus hijos terminan su clase.",
+        color: "#9b5de5"
+      }
+    ]
+  },
 };
 
 export const visitanosData = {
+
   // Canoitas
   canoitas: {
     nombre: "Canoitas",
@@ -98,13 +215,100 @@ export const visitanosData = {
 };
 
 export const galeriaData = {
+
   // Canoitas
-  canoitas: {
-  },
+  canoitas: [
+    {
+      id: 1,
+      src: "/img/cls-interactiva.jpg",
+      alt: "Descripción de la imagen 1",
+      titulo: "Aprendizaje Temprano",
+      descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
+    },
+    {
+      id: 2,
+      src: "/img/cls-interactiva.jpg",
+      alt: "Descripción de la imagen 2",
+      titulo: "Aprendizaje Temprano",
+      descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
+    },
+    {
+      id: 3,
+      src: "/img/cls-interactiva.jpg",
+      alt: "Descripción de la imagen 3",
+      titulo: "Aprendizaje Temprano",
+      descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
+    },
+    {
+      id: 4,
+      src: "/img/cls-interactiva.jpg",
+      alt: "Descripción de la imagen 4",
+      titulo: "Aprendizaje Temprano",
+      descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
+    }
+  ],
+
   // Moctezuma
-  moctezuma: {
-  },
+  moctezuma: [
+    {
+      id: 1,
+      src: "/img/cls-interactiva.jpg",
+      alt: "Descripción de la imagen 1",
+      titulo: "Aprendizaje Temprano",
+      descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
+    },
+    {
+      id: 2,
+      src: "/img/cls-interactiva.jpg",
+      alt: "Descripción de la imagen 2",
+      titulo: "Aprendizaje Temprano",
+      descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
+    },
+    {
+      id: 3,
+      src: "/img/cls-interactiva.jpg",
+      alt: "Descripción de la imagen 3",
+      titulo: "Aprendizaje Temprano",
+      descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
+    },
+    {
+      id: 4,
+      src: "/img/cls-interactiva.jpg",
+      alt: "Descripción de la imagen 4",
+      titulo: "Aprendizaje Temprano",
+      descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
+    }
+  ],
+  
   // Laureles
-  laureles: {
-  }
+  laureles: [
+    {
+      id: 1,
+      src: "/img/cls-interactiva.jpg",
+      alt: "Descripción de la imagen 1",
+      titulo: "Aprendizaje Temprano",
+      descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
+    },
+    {
+      id: 2,
+      src: "/img/cls-interactiva.jpg",
+      alt: "Descripción de la imagen 2",
+      titulo: "Aprendizaje Temprano",
+      descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
+    },
+    {
+      id: 3,
+      src: "/img/cls-interactiva.jpg",
+      alt: "Descripción de la imagen 3",
+      titulo: "Aprendizaje Temprano",
+      descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
+    },
+    {
+      id: 4,
+      src: "/img/cls-interactiva.jpg",
+      alt: "Descripción de la imagen 4",
+      titulo: "Aprendizaje Temprano",
+      descripcion: "Con un enfoque lúdico, introducimos conceptos básicos de matemáticas, lectura y ciencias, preparando a los niños para sus próximos retos.",
+    }
+  ]
 };

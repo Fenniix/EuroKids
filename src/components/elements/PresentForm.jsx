@@ -1,12 +1,7 @@
-import { Container, Row, Col, Form, FloatingLabel } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+import { Container, Row, Col, Form, FloatingLabel } from "react-bootstrap";
+import { motion } from "framer-motion";
 
 const PresentForm = ({ titulo, tituloSpan }) => {
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("¡Gracias! En un momento te contactamos.");
-  };
 
   return (
     <div className="form-present" id="formulario">
@@ -55,7 +50,9 @@ const PresentForm = ({ titulo, tituloSpan }) => {
                   <h3 className="fw-bold">¡Solicita Información!</h3>
                 </div>
 
-                <Form onSubmit={handleSubmit}>
+                {/* formulario para solicitar información */}
+                <Form>
+                  
                   <FloatingLabel controlId="floatingName" label="Nombre Completo" className="mb-3">
                     <Form.Control type="text" placeholder="Nombre" required />
                   </FloatingLabel>

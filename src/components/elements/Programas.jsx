@@ -1,6 +1,7 @@
-import { Card } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+import { Card } from "react-bootstrap";
+import { motion } from "framer-motion";
 
+// contenido dentro de la sección
 const nivelesData = [
   {
     id: 1,
@@ -51,15 +52,14 @@ const Programas = () => {
         <p className="text-secondary pt-2">Acompañamos a tu hijo en cada etapa de su aprendizaje</p>
       </Card.Body>
 
+      {/* estructrura de la card */}
       <Card.Body className="programas-container">
         {nivelesData.map((nivel, index) => (
           <Card.Body className="d-flex align-items-center flex-grow-0" key={nivel.id}>
-            
             <motion.div 
               className="programas-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} /* No es visible algun cambio */
               transition={{ delay: index * 0.2, type: "spring", stiffness: 60 }}
               whileHover={{ y: -10, borderColor: nivel.color }}
             >
@@ -80,7 +80,7 @@ const Programas = () => {
               </ul>
 
             </motion.div>
-
+            
             {index < nivelesData.length - 1 && (
               <Card.Body className="flecha-conector">➜</Card.Body>
             )}

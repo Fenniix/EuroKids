@@ -1,7 +1,7 @@
-import { Container, Row, Col } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+import { Container, Row, Col } from "react-bootstrap";
+import { motion } from "framer-motion";
 
-const BienvenidaEKC = ({ sucursal, titulo, tituloSpan}) => {
+const BienvenidaEK = ({ sucursal, titulo, tituloSpan, imgPrincipal, añosAct, alumnIns, certificados, imgSecundaria}) => {
   return (
     <section className="bienvenida-section">
       <Container>
@@ -21,26 +21,24 @@ const BienvenidaEKC = ({ sucursal, titulo, tituloSpan}) => {
               </h2>
               
               <p className="lead text-muted mb-4">
-                Descripción breve de la sede Canoitas.
-                {/* Bienvenidos a EuroKids Canoitas. Desde nuestra apertura, nos hemos dedicado a crear un ambiente donde el aprendizaje del idioma se siente natural y seguro. */}
+                Descripción breve de la sucursal.
               </p>
               
               <p className="text-secondary mb-5">
-                Caracterizticas de la sede.
-                {/* Nuestra sede se caracteriza por ser un espacio cálido y cercano. Aquí, los directores y maestros conocen a cada alumno por su nombre. No eres una matrícula más; eres parte de nuestra historia. Combinamos la excelencia académica de EuroKids con la calidez de un trato 100% personalizado. */}
+                Caracterizticas de la sucursal.
               </p>
 
               <div className="d-flex gap-5 border-top pt-4">
                 <div>
-                  <h3 className="fw-bold text-dark mb-0">+10</h3>
+                  <h3 className="fw-bold text-dark mb-0">{añosAct}</h3>
                   <small className="text-muted">Años activos en el lugar</small>
                 </div>
                 <div>
-                  <h3 className="fw-bold text-dark mb-0">+500</h3>
+                  <h3 className="fw-bold text-dark mb-0">{alumnIns}</h3>
                   <small className="text-muted">Alumnos inscritos</small>
                 </div>
                 <div>
-                  <h3 className="fw-bold text-dark mb-0">100%</h3>
+                  <h3 className="fw-bold text-dark mb-0">{certificados}</h3>
                   <small className="text-muted">Certificados</small>
                 </div>
               </div>
@@ -50,7 +48,7 @@ const BienvenidaEKC = ({ sucursal, titulo, tituloSpan}) => {
           <Col lg={6}>
             <div className="collage-container">
               <motion.img 
-                src="src/assets/img/cls-juegos.jpg" 
+                src={imgPrincipal}
                 alt="Principal" 
                 className="img-main shadow-lg"
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -61,7 +59,7 @@ const BienvenidaEKC = ({ sucursal, titulo, tituloSpan}) => {
               
               {/* Foto Secundaria - flotante */}
               <motion.img 
-                src="src/assets/img/cls-platica.jpeg" 
+                src={imgSecundaria} 
                 alt="Secundario" 
                 className="img-secondary shadow"
                 initial={{ opacity: 0, y: 50 }}
@@ -77,4 +75,4 @@ const BienvenidaEKC = ({ sucursal, titulo, tituloSpan}) => {
   );
 };
 
-export default BienvenidaEKC;
+export default BienvenidaEK;

@@ -1,6 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
+// PENDIENTE PARA DEFINIR SU PROPOSITO
+
+// informcación dentro de cada card
 const nivelesData = [
   {
     id: 1,
